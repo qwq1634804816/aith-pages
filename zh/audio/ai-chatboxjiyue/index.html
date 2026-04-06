@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="UTF-8"><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.5.2"><title>AI-Chatbox：基于ESP32S3的语音转文字智能对话项目</title><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><!-- Facebook Meta Tags --><meta property="og:url" content="https://aitool.alisencent.com/zh"><meta property="og:type" content="website"><meta property="og:title" content="AI-Chatbox：基于ESP32S3的语音转文字智能对话项目"><meta property="og:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta property="og:image" content="https://aitool.alisencent.com/og/zh/audio/ai-chatboxjiyue.png"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="codeagents.dev"><meta property="twitter:url" content="https://aitool.alisencent.com/zh"><meta name="twitter:title" content="AI工具导航"><meta name="twitter:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="twitter:image" content="https://aitool.alisencent.com/og/zh/audio/ai-chatboxjiyue.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/assets/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><!-- 自动语言检测脚本 --><script src="/scripts/autoLangDetection.js" defer></script><link rel="stylesheet" href="/assets/_slug_.BfcMA47-.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style></head> <body class="bg-white dark:bg-gray-900"> <div>  <div class="md:flex">  <div class="w-full min-h-dvh"> <nav class="w-full z-20 start-0"> <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-4"> <div class="flex items-center gap-x-12"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"> <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700"> <li> <a href="https://aitool.alisencent.com" target="_blank" class="font-medium inline-flex py-2 px-3 text-gray-700 dark:text-gray-200 bg-primary-700 rounded md:bg-transparent md:p-0 md:dark:text-gray-300" aria-current="page"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" class="text-gray-500" data-icon="tabler:arrow-up-right">  <symbol id="ai:tabler:arrow-up-right"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></symbol><use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </li> </ul> </div> </div> <div class="flex gap-3 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> <a href="https://aitool.alisencent.com" class="hidden md:inline-flex items-center dark:text-gray-300 text-gray-600"> 提交AI工具 </a> <div data-astro-transition-persist="astro-4z5srsgt-2"> <button id="theme-toggle" class="flex justify-center items-center border border-gray-200 rounded-full w-8 h-8 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-gray-500 transition-all"> <span class="sr-only">Toggle Theme</span> <svg width="1em" height="1em" viewBox="0 0 24 24" class="hidden dark:block" data-icon="tabler:moon">  <symbol id="ai:tabler:moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></symbol><use  xlink:href="#ai:tabler:moon"></use>  </svg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="dark:hidden" data-icon="tabler:sun">  <symbol id="ai:tabler:sun"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use  xlink:href="#ai:tabler:sun"></use>  </svg> </button> </div> <script type="module">function o(t){const e=t||localStorage.getItem("color-theme"),n=window.matchMedia("(prefers-color-scheme: dark)").matches;e==="dark"||e===null&&n?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function c(){const t=document.getElementById("theme-toggle");t?(console.log("theme toggle found"),t.addEventListener("click",()=>{console.log("theme toggle clicked");const e=document.documentElement.classList.contains("dark")?"light":"dark";localStorage.setItem("color-theme",e),o(e)})):console.log("theme toggle not found")}o();document.addEventListener("astro:page-load",()=>{o(),c()});</script> <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false"> <span class="sr-only">Open main menu</span> <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path> </svg> </button> <div id="mobile-menu" class="sm:hidden hidden"> <div class="space-y-1 pb-4 pt-2"> <a href="https://aitool.alisencent.com" class="block border-l-4 py-2 pl-3 pr-4 text-base font-medium border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:external-link">  <symbol id="ai:tabler:external-link"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></symbol><use  xlink:href="#ai:tabler:external-link"></use>  </svg> </a> </div> </div> </div> </div></nav> <script type="module">const e=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),n=document.getElementById("mobile-menu-icon");e&&t&&n&&e.addEventListener("click",()=>{const m=t.classList.toggle("hidden");n.setAttribute("name",m?"tabler:baseline-density-medium":"tabler:x")});</script>  <div class="max-w-2xl w-full mx-auto py-20"> <div class="mb-10"> <div class="flex justify-between items-end"> <div> <img class="h-15 w-15 mb-8" src="https://repo.alisencent.com/upload/file/2026/04/05/3f266995955ab87.png" alt="AI-Chatbox：基于ESP32S3的语音转文字智能对话项目" width="60" height="60"> <h1 class="font-bold text-4xl text-gray-900 dark:text-gray-50"> AI-Chatbox：基于ESP32S3的语音转文字智能对话项目 </h1> </div> <a class="inline-flex items-center gap-1 font-medium text-gray-800 dark:text-gray-100" href="https://github.com/paul356/ai-chatbox"> github.com/paul356/ai-chatbox <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:arrow-up-right">  <use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </div> <p class="text-gray-400 mt-2.5">AI-Chatbox 利用 ESP32S3 开发板实现语音交互，支持语音转文字、大模型问答及语音播报，适合儿童、老年人和视障人士，项目采用 Rust 语言开发并集成 Vosk 语音识别，硬件以 XIAO ESP32S3 Sense 为核心，代码托管于 GitHub。</p> </div> <main class="max-w-none font-display prose prose-zinc dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 prose-a:hover:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b prose-a:hover:border-solid prose-a:hover:border-primary-400 prose-headings:text-gray-800 dark:prose-headings:text-gray-100 prose-a:border-gray-400 dark:prose-a:border-gray-400 dark:prose-a:hover:border-primary-400">  <p>AI-Chatbox 是一款基于 ESP32S3 开发板的语音交互设备。用户通过语音输入与大型语言模型（LLM）进行对话，设备会将语音转写成文本，发送给模型获取回答，之后还支持语音合成播报。项目由 Rust 语言编写，集成了 Vosk 语音识别工具，专为不便使用手机应用的人群设计，如儿童、老年人及视障用户。硬件方面，采用 XIAO ESP32S3 Sense 结合语音编码模块，项目代码公开托管于 GitHub。旨在为嵌入式开发爱好者和智能硬件开发者打造便捷的语音交互体验。</p>
+<h2 id="功能列表">功能列表</h2>
+<ul>
+<li><strong>语音唤醒与命令识别</strong>：支持唤醒词“hi, 乐鑫”和指令“我有个问题”以启动录音功能。</li>
+<li><strong>语音转文字</strong>：采用 Vosk 工具将录制的 WAV 音频转换成文本，支持中文识别。</li>
+<li><strong>大模型交互</strong>：通过 <a href="https://www.kdjingpai.com/en/deepseek-chatshena/">DeepSeek</a> API 发送文本查询，获取智能回答。</li>
+<li><strong>日志记录</strong>：支持实时查看设备日志，便于调试和状态监控。</li>
+<li><strong>跨设备访问</strong>：利用 Flask 构建 REST 服务，允许局域网内其它设备调用语音转文字功能。</li>
+<li><strong>嵌入式优化</strong>：Rust 代码针对嵌入式环境优化，设置最大生成 token 为 512，兼顾性能与资源限制。</li>
+</ul>
+<h2 id="使用帮助">使用帮助</h2>
+<h3 id="安装与配置">安装与配置</h3>
+<ol>
+<li>
+<p><strong>准备硬件</strong><br>
+需要一块带有麦克风和语音编码能力的 XIAO ESP32S3 Sense 开发板。外接语音编码硬件可提升音频处理效果。确保开发板连接 SD 卡，以存储语音模型。</p>
+</li>
+<li>
+<p><strong>配置开发环境</strong></p>
+<ul>
+<li>安装 Rust on ESP，参考官方文档。</li>
+<li>安装 Python 环境，运行 Vosk 语音转文字服务。</li>
+<li>下载 Vosk 中文模型（<code>vosk-model-cn-0.22.zip</code>）并解压。</li>
+<li>将模型文件（<code>mn7_cn</code>、<code>nsnet2</code>、<code>vadnet1_medium</code>、<code>wn9_hilexin</code>）复制至 SD 卡根目录。</li>
+</ul>
+</li>
+<li>
+<p><strong>安装依赖</strong><br>
+运行以下命令安装 Python 依赖：</p>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>pip install vosk flask flask-cors</span></span></code></pre>
+<p>确认 Rust 环境配置完成，进入 ESPUP 环境：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>source $HOME/export-esp.sh</span></span></code></pre>
+<ol start="4">
+<li><strong>编译与上传固件</strong>
+<ul>
+<li>克隆项目仓库：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>git clone https://github.com/paul356/ai-chatbox.git</span></span></code></pre>
+<ul>
+<li>进入项目目录，执行编译：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>cargo build</span></span></code></pre>
+<ul>
+<li>编译成功后，上传固件：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>cargo espflash flash -p /dev/ttyACM0 --flash-size 8mb</span></span></code></pre>
+<ul>
+<li>配置环境变量（Wi-Fi 名称和密码及 DeepSeek API 密钥）：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>export WIFI_SSID=&#x3C;your-ssid></span></span>
+<span class="line"><span>export WIFI_PASS=&#x3C;your-password></span></span>
+<span class="line"><span>export LLM_AUTH_TOKEN=&#x3C;your-deepseek-token></span></span></code></pre>
+<ol start="5">
+<li><strong>运行语音转文字服务</strong>
+<ul>
+<li>在 <code>vosk-model-cn-0.22</code> 目录上一级运行：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>python vosk_server.py</span></span></code></pre>
+<ul>
+<li>服务启动后，监听接口 <code>http://0.0.0.0:5000/transcribe</code>，支持接收 WAV 文件并返回文本。</li>
+</ul>
+<ol start="6">
+<li><strong>测试服务</strong>
+通过命令测试语音转文字服务：</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>curl -X POST -F "file=@record.wav" http://127.0.0.1:5000/transcribe</span></span></code></pre>
+<h3 id="操作流程">操作流程</h3>
+<ol>
+<li><strong>启动设备</strong><br>
+连接开发板运行固件，可用命令查看日志：</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>cargo espflash monitor</span></span></code></pre>
+<ol start="2">
+<li>
+<p><strong>语音交互</strong></p>
+<ul>
+<li>通过唤醒词“hi, 乐鑫”激活设备。</li>
+<li>说出“我有个问题”进入录音模式。</li>
+<li>说出问题，设备检测静音 2 秒后自动结束录音。</li>
+<li>语音由 Vosk 转文字后发送至 DeepSeek API，返回内容记录日志。</li>
+</ul>
+</li>
+<li>
+<p><strong>查看日志</strong><br>
+日志显示设备状态、识别结果及大模型回答。例如，询问“大模型是什么”将显示详细模型定义与功能说明。</p>
+</li>
+</ol>
+<h3 id="注意事项">注意事项</h3>
+<ul>
+<li><strong>语音清晰</strong>：Vosk 模型体积较小，发音精准有助于提高识别准确率。</li>
+<li><strong>网络连接</strong>：设备需接入 Wi-Fi 以访问 DeepSeek API。</li>
+<li><strong>模型存储</strong>：确保 SD 卡有足够空间（数百 MB）存放语音模型。</li>
+<li><strong>调试信息</strong>：日志中以 <code>Error:</code> 开头的条目表示错误，可用于问题排查。</li>
+</ul>
+<h2 id="应用场景">应用场景</h2>
+<ol>
+<li>
+<p><strong>智能助手</strong><br>
+用户以语音操作设备，获取知识问答或执行任务，适合儿童和老年用户。例如，儿童询问“太阳为什么发光”，设备给出通俗回答。</p>
+</li>
+<li>
+<p><strong>无屏设备交互</strong><br>
+视障或不便使用手机者可通过语音实现信息查询或对话功能。</p>
+</li>
+<li>
+<p><strong>嵌入式开发实验</strong><br>
+开发者能借助项目学习 Rust 在嵌入式上的应用，探索语音识别与大模型结合。</p>
+</li>
+<li>
+<p><strong>教育与学习</strong><br>
+学生通过语音提问，设备连接大模型，提供专业解答，适合课堂及自学。</p>
+</li>
+</ol>
+<h2 id="qa">QA</h2>
+<ol>
+<li>
+<p><strong>Vosk 模型支持哪些语言？</strong><br>
+本项目使用 <code>vosk-model-cn-0.22</code>，侧重中文识别。Vosk 官网提供多语言模型，可根据需求替换。</p>
+</li>
+<li>
+<p><strong>如何提升识别准确率？</strong><br>
+保持发音清晰，避免背景噪声，使用高品质麦克风，或者升级到更大模型如 <code>vosk-model-cn-0.22-large</code>。</p>
+</li>
+<li>
+<p><strong>怎么获取 DeepSeek API 密钥？</strong><br>
+访问 DeepSeek 官网注册账号并申请 API 密钥，配置至环境变量 <code>LLM_AUTH_TOKEN</code>。</p>
+</li>
+<li>
+<p><strong>设备支持离线运行吗？</strong><br>
+Vosk 语音识别可离线执行，但大模型交互需联网访问 DeepSeek API。</p>
+</li>
+</ol>  </main> </div>  </div> </div> </div> <footer class="border-t border-gray-200 dark:border-gray-600 font-display" aria-labelledby="footer-heading"> <h2 id="footer-heading" class="sr-only">Footer</h2> <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32"> <div class="xl:grid xl:grid-cols-3 xl:gap-8"> <div class="space-y-8"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="flex space-x-6">  </div> </div> <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0 xl:justify-items-end"> <div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 目录 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/submit" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 提交 </a> </li><li> <a href="/zh/advertise" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 广告 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 分类 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/tags/chatbot" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI聊天 </a> </li><li> <a href="/zh/tags/writing" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI写作 </a> </li><li> <a href="/zh/tags/image" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI绘图 </a> </li><li> <a href="/zh/tags/video" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI视频 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 法律 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/legal/terms-of-service" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 隐私政策 </a> </li><li> <a href="/zh/legal/privacy-policy" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 服务条款 </a> </li> </ul> </div> </div> </div> <div class="mt-16 border-t border-gray-900/10 dark:border-gray-600 pt-8 sm:mt-20 lg:mt-24"> <p class="text-xs leading-5 text-gray-500">
+&copy; 2026 🚀 AI 工具导航 All rights reserved.
+</p> </div> </div> </footer> <div class="fixed bottom-6 right-6 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700"> <div class="flex items-center space-x-2"> <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language:</span> <div class="flex space-x-1"> <a href="https://aitool.alisencent.com/audio/ai-chatboxjiyue/" class="px-3 py-1 text-sm rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"> EN </a><a href="https://aitool.alisencent.com/zh/audio/ai-chatboxjiyue/" class="px-3 py-1 text-sm rounded-md bg-primary-500 text-white"> ZH </a> </div> </div> </div>  </body></html>

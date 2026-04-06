@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="UTF-8"><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.5.2"><title>chatless：轻量级本地AI聊天与知识库客户端</title><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><!-- Facebook Meta Tags --><meta property="og:url" content="https://aitool.alisencent.com/zh"><meta property="og:type" content="website"><meta property="og:title" content="chatless：轻量级本地AI聊天与知识库客户端"><meta property="og:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta property="og:image" content="https://aitool.alisencent.com/og/zh/chatbot/chatless.png"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="codeagents.dev"><meta property="twitter:url" content="https://aitool.alisencent.com/zh"><meta name="twitter:title" content="AI工具导航"><meta name="twitter:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="twitter:image" content="https://aitool.alisencent.com/og/zh/chatbot/chatless.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/assets/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><!-- 自动语言检测脚本 --><script src="/scripts/autoLangDetection.js" defer></script><link rel="stylesheet" href="/assets/_slug_.BfcMA47-.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style></head> <body class="bg-white dark:bg-gray-900"> <div>  <div class="md:flex">  <div class="w-full min-h-dvh"> <nav class="w-full z-20 start-0"> <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-4"> <div class="flex items-center gap-x-12"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"> <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700"> <li> <a href="https://aitool.alisencent.com" target="_blank" class="font-medium inline-flex py-2 px-3 text-gray-700 dark:text-gray-200 bg-primary-700 rounded md:bg-transparent md:p-0 md:dark:text-gray-300" aria-current="page"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" class="text-gray-500" data-icon="tabler:arrow-up-right">  <symbol id="ai:tabler:arrow-up-right"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></symbol><use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </li> </ul> </div> </div> <div class="flex gap-3 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> <a href="https://aitool.alisencent.com" class="hidden md:inline-flex items-center dark:text-gray-300 text-gray-600"> 提交AI工具 </a> <div data-astro-transition-persist="astro-4z5srsgt-2"> <button id="theme-toggle" class="flex justify-center items-center border border-gray-200 rounded-full w-8 h-8 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-gray-500 transition-all"> <span class="sr-only">Toggle Theme</span> <svg width="1em" height="1em" viewBox="0 0 24 24" class="hidden dark:block" data-icon="tabler:moon">  <symbol id="ai:tabler:moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></symbol><use  xlink:href="#ai:tabler:moon"></use>  </svg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="dark:hidden" data-icon="tabler:sun">  <symbol id="ai:tabler:sun"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use  xlink:href="#ai:tabler:sun"></use>  </svg> </button> </div> <script type="module">function o(t){const e=t||localStorage.getItem("color-theme"),n=window.matchMedia("(prefers-color-scheme: dark)").matches;e==="dark"||e===null&&n?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function c(){const t=document.getElementById("theme-toggle");t?(console.log("theme toggle found"),t.addEventListener("click",()=>{console.log("theme toggle clicked");const e=document.documentElement.classList.contains("dark")?"light":"dark";localStorage.setItem("color-theme",e),o(e)})):console.log("theme toggle not found")}o();document.addEventListener("astro:page-load",()=>{o(),c()});</script> <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false"> <span class="sr-only">Open main menu</span> <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path> </svg> </button> <div id="mobile-menu" class="sm:hidden hidden"> <div class="space-y-1 pb-4 pt-2"> <a href="https://aitool.alisencent.com" class="block border-l-4 py-2 pl-3 pr-4 text-base font-medium border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:external-link">  <symbol id="ai:tabler:external-link"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></symbol><use  xlink:href="#ai:tabler:external-link"></use>  </svg> </a> </div> </div> </div> </div></nav> <script type="module">const e=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),n=document.getElementById("mobile-menu-icon");e&&t&&n&&e.addEventListener("click",()=>{const m=t.classList.toggle("hidden");n.setAttribute("name",m?"tabler:baseline-density-medium":"tabler:x")});</script>  <div class="max-w-2xl w-full mx-auto py-20"> <div class="mb-10"> <div class="flex justify-between items-end"> <div> <img class="h-15 w-15 mb-8" src="https://repo.alisencent.com/upload/file/2026/04/02/3f266995955ab87.png" alt="chatless：轻量级本地AI聊天与知识库客户端" width="60" height="60"> <h1 class="font-bold text-4xl text-gray-900 dark:text-gray-50"> chatless：轻量级本地AI聊天与知识库客户端 </h1> </div> <a class="inline-flex items-center gap-1 font-medium text-gray-800 dark:text-gray-100" href="https://github.com/kamjin3086/chatless"> github.com/kamjin3086/chatless <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:arrow-up-right">  <use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </div> <p class="text-gray-400 mt-2.5">chatless 是一款轻量且开源的 AI 聊天客户端，兼容 Windows、MacOS 和 Linux，旨在为用户提供本地化的 AI 聊天、文档解析及知识库管理功能，特别适合配置较低的电脑，避免资源占用过高。该项目采用 Tauri 2.0 和 Next.js 15 技术开发，界面简洁，支持通过本地或远程 Ollama API 进行 AI 交互，且支持知识库的快速总结与分析，预计未来将完全开源。</p> </div> <main class="max-w-none font-display prose prose-zinc dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 prose-a:hover:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b prose-a:hover:border-solid prose-a:hover:border-primary-400 prose-headings:text-gray-800 dark:prose-headings:text-gray-100 prose-a:border-gray-400 dark:prose-a:border-gray-400 dark:prose-a:hover:border-primary-400">  <p>chatless 是一款轻量级且开源的 AI 聊天客户端，支持 Windows、MacOS 与 Linux 平台。它主要为用户提供本地 AI 聊天、文档解析及知识库管理功能，专为低性能设备设计，避免运行繁重的程序带来的资源压力。该项目由 kamjin3086 开发，采用 Tauri 2.0 与 Next.js 15 构建，结合简洁的界面设计，确保软件占用小、运行流畅。用户可通过本地或远程的 <a href="https://www.kdjingpai.com/ollama/">Ollama</a> API 进行交流，并支持快速总结和分析知识库。项目开发进度约为 85%，未来将于 GitHub 完全开源。</p>
+<p><img src="https://repo.alisencent.com/upload/file/2026/04/02/ac890f468058d5f.webp" alt="chatless截图"></p>
+<h2 id="功能列表">功能列表</h2>
+<ul>
+<li><strong>AI 聊天</strong>：支持本地或远程 Ollama API 对话，适合推理问题和简单代码生成。</li>
+<li><strong>本地文档解析</strong>：解析并提取本地文档内容，支持对话式查询。</li>
+<li><strong>知识库管理</strong>：建立和管理本地知识库，支持生成嵌入，快速总结与分析文档。</li>
+<li><strong>历史记录管理</strong>：保存并管理聊天记录，便于回顾与整理。</li>
+<li><strong>轻量级设计</strong>：安装包仅约 20MB，资源占用低，适合低性能设备。</li>
+<li><strong>跨平台支持</strong>：兼容 Windows、MacOS 和 Linux 系统。</li>
+<li><strong>个性化设置</strong>：提供灵活的配置选项，满足用户习惯。</li>
+</ul>
+<h2 id="使用帮助">使用帮助</h2>
+<h3 id="安装流程">安装流程</h3>
+<p>chatless 是开源项目，需要从 GitHub 克隆代码并在本地构建，步骤如下：</p>
+<ol>
+<li><strong>克隆代码库</strong><br>
+在终端执行命令：</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/kamjin3086/chatless.git</span></span></code></pre>
+<p>此操作将项目下载到本地。注意，截至 2025 年 7 月代码尚未完整开源，可能需等待进一步发布。</p>
+<ol start="2">
+<li><strong>安装依赖环境</strong></li>
+</ol>
+<p>chatless 基于 Tauri 2.0 和 Next.js 15，要求安装以下环境：</p>
+<ul>
+<li><strong>Node.js</strong>：推荐使用 16 及以上版本，检测命令：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">node</span><span style="color:#79B8FF"> -v</span></span></code></pre>
+<p>若未安装，请访问 <a href="https://nodejs.org/">Node.js 官网</a> 下载。</p>
+<ul>
+<li><strong>Rust</strong>：Tauri 依赖 Rust 编译器，安装命令：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> --proto</span><span style="color:#9ECBFF"> '=https'</span><span style="color:#79B8FF"> --tlsv1.2</span><span style="color:#79B8FF"> -sSf</span><span style="color:#9ECBFF"> https://sh.rustup.rs</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> sh</span></span></code></pre>
+<ul>
+<li><strong>Tauri 依赖</strong>：参考 <a href="https://tauri.app/">Tauri 官方文档</a> 安装操作系统所需依赖。</li>
+</ul>
+<ol start="3">
+<li><strong>安装项目依赖</strong><br>
+切换到项目目录：</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> chatless</span></span></code></pre>
+<p>然后安装 Node.js 依赖：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span></span></code></pre>
+<ol start="4">
+<li><strong>构建与运行</strong><br>
+构建 Tauri 应用：</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> tauri</span><span style="color:#9ECBFF"> build</span></span></code></pre>
+<p>运行开发模式：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> tauri</span><span style="color:#9ECBFF"> dev</span></span></code></pre>
+<p>运行成功后，chatless 会启动并显示主界面。MacOS 安装包大小约 20 多 MB，具体因系统略有不同。</p>
+<ol start="5">
+<li><strong>配置 Ollama API</strong><br>
+chatless 默认通过 Ollama 执行 AI 推理，需确保 Ollama 已安装并运行：</li>
+</ol>
+<ul>
+<li>本地部署：下载并安装 Ollama，详情见 <a href="https://ollama.com/">Ollama 官网</a>。</li>
+<li>远程部署：在设置中填写远程 Ollama API 地址，格式如 <code>http://&#x3C;ip>:&#x3C;port></code>。</li>
+</ul>
+<p>在 chatless 的“AI 模型提供商设置”页面配置 API 并保存。</p>
+<h3 id="功能操作流程">功能操作流程</h3>
+<h4 id="ai-聊天">AI 聊天</h4>
+<ol>
+<li>打开 chatless，进入“聊天”页面。</li>
+<li>选择本地或远程 Ollama API（需事先设置）。</li>
+<li>输入问题或指令，如“帮我写一个 Python 循环”或“总结这篇文档”。</li>
+<li>AI 实时响应，答案显示在对话框，支持继续提问和查看历史记录。</li>
+</ol>
+<h4 id="本地文档解析">本地文档解析</h4>
+<ol>
+<li>在主界面选择“文档解析”。</li>
+<li>上传支持的文档格式，如 PDF、TXT、DOCX。</li>
+<li>软件自动提取内容，生成可查询的文本。</li>
+<li>输入与文档相关的问题，如“提取文档中的关键点”，AI 将基于内容回答。</li>
+<li>可将解析结果保存至知识库，便于后续调用。</li>
+</ol>
+<h4 id="知识库管理">知识库管理</h4>
+<ol>
+<li>访问“知识库”页面，点击“新建知识库”。</li>
+<li>上传文档或手动录入，系统将生成嵌入（支持本地或 Ollama 推理）。</li>
+<li>使用对话功能查询知识库内容，如“总结知识库中的财务数据”。</li>
+<li>在“知识库详情”中管理内容或调整嵌入参数。</li>
+</ol>
+<h4 id="历史记录管理">历史记录管理</h4>
+<ol>
+<li>点击主界面“历史记录”选项。</li>
+<li>浏览聊天记录，支持按时间或主题筛选。</li>
+<li>支持导出为文本文件，或删除无用记录。</li>
+</ol>
+<h4 id="个性化设置">个性化设置</h4>
+<ol>
+<li>进入“常规设置”，调整主题、字体大小等界面选项。</li>
+<li>在“知识库设置”中配置嵌入生成方案（本地或远程）。</li>
+<li>“AI 模型提供商设置”页面可切换 API 或调整模型参数。</li>
+</ol>
+<h3 id="注意事项">注意事项</h3>
+<ul>
+<li><strong>性能优化</strong>：chatless 设计针对低性能设备，但需确保 Ollama 推理服务稳定。</li>
+<li><strong>文档支持</strong>：支持大多数常见文档格式，复杂或加密文档可能需预处理。</li>
+<li><strong>开源计划</strong>：代码尚未完全开源，建议关注 GitHub 仓库更新。</li>
+<li><strong>社区支持</strong>：开发者欢迎反馈意见，支持在 GitHub 提交 issue。</li>
+</ul>
+<h2 id="应用场景">应用场景</h2>
+<ol>
+<li><strong>个人知识管理</strong><br>
+便于将学习笔记或工作资料导入知识库，快速总结与查询，适合学生和研究人员。</li>
+<li><strong>远程 AI 推理</strong><br>
+在低性能电脑通过远程 Ollama API 使用高性能服务器，适合需要处理复杂任务的专业人士。</li>
+<li><strong>轻量级代码辅助</strong><br>
+程序员可利用 chatless 生成简单代码和调试片段，界面简单且节省资源。</li>
+<li><strong>本地化办公需求</strong><br>
+企业员工可解析本地文档并与 AI 交互，数据无需上传至云端，有效保护隐私。</li>
+</ol>
+<h2 id="常见问答qa">常见问答（QA）</h2>
+<ol>
+<li><strong>chatless 支持哪些 AI 模型？</strong><br>
+当前重点支持 Ollama 的本地及远程 API，未来可能扩展其他模型。</li>
+<li><strong>如何在低性能电脑上运行？</strong><br>
+安装包体积小（约 20 MB），使用 Tauri 与 Next.js 优化性能，支持远程 API 减轻本地负载。</li>
+<li><strong>知识库功能如何使用？</strong><br>
+上传文档或手动录入内容生成嵌入，之后可通过对话查询，适合快速分析总结。</li>
+<li><strong>是否需要联网？</strong><br>
+本地模式无需联网，远程模式需连接 Ollama 服务。</li>
+</ol>  </main> </div>  </div> </div> </div> <footer class="border-t border-gray-200 dark:border-gray-600 font-display" aria-labelledby="footer-heading"> <h2 id="footer-heading" class="sr-only">Footer</h2> <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32"> <div class="xl:grid xl:grid-cols-3 xl:gap-8"> <div class="space-y-8"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="flex space-x-6">  </div> </div> <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0 xl:justify-items-end"> <div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 目录 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/submit" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 提交 </a> </li><li> <a href="/zh/advertise" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 广告 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 分类 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/tags/chatbot" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI聊天 </a> </li><li> <a href="/zh/tags/writing" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI写作 </a> </li><li> <a href="/zh/tags/image" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI绘图 </a> </li><li> <a href="/zh/tags/video" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI视频 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 法律 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/legal/terms-of-service" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 隐私政策 </a> </li><li> <a href="/zh/legal/privacy-policy" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 服务条款 </a> </li> </ul> </div> </div> </div> <div class="mt-16 border-t border-gray-900/10 dark:border-gray-600 pt-8 sm:mt-20 lg:mt-24"> <p class="text-xs leading-5 text-gray-500">
+&copy; 2026 🚀 AI 工具导航 All rights reserved.
+</p> </div> </div> </footer> <div class="fixed bottom-6 right-6 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700"> <div class="flex items-center space-x-2"> <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language:</span> <div class="flex space-x-1"> <a href="https://aitool.alisencent.com/chatbot/chatless/" class="px-3 py-1 text-sm rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"> EN </a><a href="https://aitool.alisencent.com/zh/chatbot/chatless/" class="px-3 py-1 text-sm rounded-md bg-primary-500 text-white"> ZH </a> </div> </div> </div>  </body></html>

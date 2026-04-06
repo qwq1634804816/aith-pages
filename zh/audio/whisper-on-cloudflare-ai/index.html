@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="UTF-8"><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.5.2"><title>Whisper on Cloudflare AI：将音频转文字并生成字幕的免费工具</title><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><!-- Facebook Meta Tags --><meta property="og:url" content="https://aitool.alisencent.com/zh"><meta property="og:type" content="website"><meta property="og:title" content="Whisper on Cloudflare AI：将音频转文字并生成字幕的免费工具"><meta property="og:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta property="og:image" content="https://aitool.alisencent.com/og/zh/audio/whisper-on-cloudflare-ai.png"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="codeagents.dev"><meta property="twitter:url" content="https://aitool.alisencent.com/zh"><meta name="twitter:title" content="AI工具导航"><meta name="twitter:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="twitter:image" content="https://aitool.alisencent.com/og/zh/audio/whisper-on-cloudflare-ai.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/assets/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><!-- 自动语言检测脚本 --><script src="/scripts/autoLangDetection.js" defer></script><link rel="stylesheet" href="/assets/_slug_.BfcMA47-.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style></head> <body class="bg-white dark:bg-gray-900"> <div>  <div class="md:flex">  <div class="w-full min-h-dvh"> <nav class="w-full z-20 start-0"> <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-4"> <div class="flex items-center gap-x-12"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"> <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700"> <li> <a href="https://aitool.alisencent.com" target="_blank" class="font-medium inline-flex py-2 px-3 text-gray-700 dark:text-gray-200 bg-primary-700 rounded md:bg-transparent md:p-0 md:dark:text-gray-300" aria-current="page"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" class="text-gray-500" data-icon="tabler:arrow-up-right">  <symbol id="ai:tabler:arrow-up-right"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></symbol><use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </li> </ul> </div> </div> <div class="flex gap-3 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> <a href="https://aitool.alisencent.com" class="hidden md:inline-flex items-center dark:text-gray-300 text-gray-600"> 提交AI工具 </a> <div data-astro-transition-persist="astro-4z5srsgt-2"> <button id="theme-toggle" class="flex justify-center items-center border border-gray-200 rounded-full w-8 h-8 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-gray-500 transition-all"> <span class="sr-only">Toggle Theme</span> <svg width="1em" height="1em" viewBox="0 0 24 24" class="hidden dark:block" data-icon="tabler:moon">  <symbol id="ai:tabler:moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></symbol><use  xlink:href="#ai:tabler:moon"></use>  </svg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="dark:hidden" data-icon="tabler:sun">  <symbol id="ai:tabler:sun"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use  xlink:href="#ai:tabler:sun"></use>  </svg> </button> </div> <script type="module">function o(t){const e=t||localStorage.getItem("color-theme"),n=window.matchMedia("(prefers-color-scheme: dark)").matches;e==="dark"||e===null&&n?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function c(){const t=document.getElementById("theme-toggle");t?(console.log("theme toggle found"),t.addEventListener("click",()=>{console.log("theme toggle clicked");const e=document.documentElement.classList.contains("dark")?"light":"dark";localStorage.setItem("color-theme",e),o(e)})):console.log("theme toggle not found")}o();document.addEventListener("astro:page-load",()=>{o(),c()});</script> <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false"> <span class="sr-only">Open main menu</span> <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path> </svg> </button> <div id="mobile-menu" class="sm:hidden hidden"> <div class="space-y-1 pb-4 pt-2"> <a href="https://aitool.alisencent.com" class="block border-l-4 py-2 pl-3 pr-4 text-base font-medium border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:external-link">  <symbol id="ai:tabler:external-link"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></symbol><use  xlink:href="#ai:tabler:external-link"></use>  </svg> </a> </div> </div> </div> </div></nav> <script type="module">const e=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),n=document.getElementById("mobile-menu-icon");e&&t&&n&&e.addEventListener("click",()=>{const m=t.classList.toggle("hidden");n.setAttribute("name",m?"tabler:baseline-density-medium":"tabler:x")});</script>  <div class="max-w-2xl w-full mx-auto py-20"> <div class="mb-10"> <div class="flex justify-between items-end"> <div> <img class="h-15 w-15 mb-8" src="https://repo.alisencent.com/upload/file/2026/04/05/3f266995955ab87.png" alt="Whisper on Cloudflare AI：将音频转文字并生成字幕的免费工具" width="60" height="60"> <h1 class="font-bold text-4xl text-gray-900 dark:text-gray-50"> Whisper on Cloudflare AI：将音频转文字并生成字幕的免费工具 </h1> </div> <a class="inline-flex items-center gap-1 font-medium text-gray-800 dark:text-gray-100" href="https://github.com/thun888/whisper_cloudflare"> github.com/thun888/whisper_cloudflare <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:arrow-up-right">  <use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </div> <p class="text-gray-400 mt-2.5">Whisper_Cloudflare 是一个基于 OpenAI Whisper 模型并结合 Cloudflare Workers 无服务器架构的开源项目。它允许用户部署单个 worker.js 文件，实现多语言音频转文字及生成 SRT 字幕文件，操作简单且完全免费，适合个人及团队使用。</p> </div> <main class="max-w-none font-display prose prose-zinc dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 prose-a:hover:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b prose-a:hover:border-solid prose-a:hover:border-primary-400 prose-headings:text-gray-800 dark:prose-headings:text-gray-100 prose-a:border-gray-400 dark:prose-a:border-gray-400 dark:prose-a:hover:border-primary-400">  <p>Whisper_Cloudflare 是由开发者 thun888 发起的开源项目，托管于 GitHub。它基于 OpenAI 的 <a href="https://www.kdjingpai.com/crisperwhisper/">Whisper</a> 模型，并利用 Cloudflare Workers 的无服务器架构，提供高效的语音转文字服务。用户仅需部署一个 <code>worker.js</code> 文件，即可将音频转换成文本或生成带时间戳的 SRT 字幕文件。此项目支持多种语言及常见音频格式，操作简便，适合开发者快速搭建语音处理工具。项目完全免费，代码公开，无需服务器维护，适合个人或团队的音频转录和字幕生成需求。</p>
+<p><img src="https://repo.alisencent.com/upload/file/2026/04/05/b23f7a4473cf941.png" alt="示意图"></p>
+<h2 id="功能列表">功能列表</h2>
+<ul>
+<li>语音转文字：支持多语言音频转录。</li>
+<li>字幕生成：输出带时间信息的 SRT 格式字幕文件。</li>
+<li>多格式兼容：支持 MP3、WAV 等常见音频格式。</li>
+<li>无服务器部署：通过 Cloudflare Workers 部署，单文件 <code>worker.js</code> 即可。</li>
+<li>API 接口：提供 <code>/raw</code>（原始转录 JSON）和 <code>/srt</code>（字幕文件）两种接口。</li>
+<li>语音活动检测（VAD）：支持 <code>vad_filter</code> 参数过滤非语音内容。</li>
+<li>上下文优化：通过 <code>initial_prompt</code> 和 <code>prefix</code> 参数提升识别准确度。</li>
+<li>翻译功能：支持将音频内容翻译成指定语言。</li>
+</ul>
+<h2 id="使用帮助">使用帮助</h2>
+<h3 id="部署流程">部署流程</h3>
+<p>部署 Whisper_Cloudflare 非常简便，仅需将 <code>worker.js</code> 代码拷贝到 Cloudflare Workers 平台，无须克隆整个仓库。步骤如下：</p>
+<ol>
+<li>
+<p><strong>注册 Cloudflare 账号</strong></p>
+<p>访问 Cloudflare 官网，注册或登录账号，确保启用 Workers 功能（免费计划支持）。进入“Workers”页面，点击“创建 Worker”。</p>
+</li>
+<li>
+<p><strong>创建 Worker 并粘贴代码</strong></p>
+<ul>
+<li>在编辑器中新建 Worker（默认名为 <code>worker</code> 或自定义）。</li>
+<li>粘贴提供的 <code>worker.js</code> 代码，替换默认内容。</li>
+<li>保存代码。</li>
+</ul>
+</li>
+<li>
+<p><strong>安装 Wrangler（可选，命令行部署）</strong></p>
+<p>若需命令行管理 Worker，安装 Wrangler（Cloudflare Workers CLI）。需要安装 Node.js（建议 v16.17.0 及以上），执行：</p>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -g</span><span style="color:#9ECBFF"> wrangler</span></span></code></pre>
+<ol start="4">
+<li>
+<p><strong>配置 Wrangler 和 AI 绑定</strong></p>
+<ul>
+<li>登录 Cloudflare:</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">wrangler</span><span style="color:#9ECBFF"> login</span></span></code></pre>
+<ul>
+<li>编辑 <code>wrangler.toml</code> 文件，添加配置:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="toml"><code><span class="line"><span style="color:#E1E4E8">name = </span><span style="color:#9ECBFF">"whisper-cloudflare"</span></span>
+<span class="line"><span style="color:#E1E4E8">compatibility_flags = [</span><span style="color:#9ECBFF">"nodejs_compat"</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">[</span><span style="color:#B392F0">ai</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">binding = </span><span style="color:#9ECBFF">"AI"</span></span></code></pre>
+<ul>
+<li>若不使用 Wrangler，可在 Cloudflare 仪表板手动绑定 AI 模型，选择 <code>@cf/openai/whisper-large-v3-turbo</code>。</li>
+</ul>
+<ol start="5">
+<li>
+<p><strong>发布 Worker</strong></p>
+<ul>
+<li>在编辑器点击“部署”按钮，发布代码。</li>
+<li>或使用命令行:</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">wrangler</span><span style="color:#9ECBFF"> deploy</span></span></code></pre>
+<ul>
+<li>部署成功后，Cloudflare 会生成 Worker URL，如 <code>https://whispercloudflare.tchepai.com/</code>。</li>
+</ul>
+<ol start="6">
+<li>
+<p><strong>准备音频文件</strong></p>
+<p>确保音频格式为 MP3 或 WAV，文件不超过 25MB（受 Cloudflare 限制）。音频可上传为二进制文件或提供可访问 URL（推荐云存储）。</p>
+</li>
+</ol>
+<h3 id="主要功能操作">主要功能操作</h3>
+<h4 id="语音转文字">语音转文字</h4>
+<p>Whisper_Cloudflare 利用 Whisper 模型将音频转换为文本，步骤如下：</p>
+<ul>
+<li><strong>上传音频</strong>：以 POST 请求向 <code>/raw</code> 接口发送二进制音频数据。例如：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -X</span><span style="color:#9ECBFF"> POST</span><span style="color:#9ECBFF"> "https://whisper.ohen5pbf93.workers.dev/raw"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">-H </span><span style="color:#9ECBFF">"Content-Type: application/octet-stream"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">--data-binary </span><span style="color:#9ECBFF">"@audio.mp3"</span></span></code></pre>
+<ul>
+<li><strong>获取转录结果</strong>：接口返回 JSON 格式，含文本及时间段信息：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "response"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"这是一个测试音频。"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "segments"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">      {</span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"这是一个"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"start"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"end"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1.2</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">      {</span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"测试音频"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"start"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1.3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"end"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2.5</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">    ]</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<ul>
+<li><strong>处理大文件</strong>：若超过 25MB，需人工拆分为约 1MB 小块，分别上传后合并结果。</li>
+</ul>
+<h4 id="字幕生成">字幕生成</h4>
+<p>生成适用于视频的 SRT 字幕文件，流程如下：</p>
+<ul>
+<li><strong>请求字幕</strong>：向 <code>/srt</code> 接口上传音频：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -X</span><span style="color:#9ECBFF"> POST</span><span style="color:#9ECBFF"> "https://whispercloudflare.tchepai.com/srt"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">-H </span><span style="color:#9ECBFF">"Content-Type: application/octet-stream"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">--data-binary </span><span style="color:#9ECBFF">"@audio.mp3"</span></span></code></pre>
+<ul>
+<li><strong>获取字幕结果</strong>：返回 SRT 格式字幕，例如：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>1</span></span>
+<span class="line"><span>00:00:00,000 --> 00:00:01,200</span></span>
+<span class="line"><span>这是一个</span></span>
+<span class="line"><span>2</span></span>
+<span class="line"><span>00:00:01,300 --> 00:00:02,500</span></span>
+<span class="line"><span>测试音频</span></span></code></pre>
+<h4 id="web-界面使用">Web 界面使用</h4>
+<p><code>worker.js</code> 内置一个 HTML 界面，用户可通过浏览器操作：</p>
+<ul>
+<li>访问 Worker URL 根路径（例如 <a href="https://whispercloudflare.tchepai.com/%EF%BC%89%E3%80%82">https://whispercloudflare.tchepai.com/）。</a></li>
+<li>选择 MP3 或 WAV 文件，设定任务类型（转录或翻译）、语言、VAD 过滤等参数。</li>
+<li>提交后，显示 SRT 字幕，支持下载 <code>.srt</code> 文件。</li>
+<li>支持进度条，处理 41 分钟音频约需 1.9 分钟。</li>
+</ul>
+<h4 id="api-使用">API 使用</h4>
+<p>项目提供两个关键 API 接口：</p>
+<ul>
+<li><code>/raw</code>：返回 JSON 格式原始转录数据，适合开发者进一步处理。</li>
+<li><code>/srt</code>：输出 SRT 字幕文件，适合视频编辑。</li>
+</ul>
+<p>示例 JavaScript 调用：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> response</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> fetch</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'https://whispercloudflare.tchepai.com/srt'</span><span style="color:#E1E4E8">, {</span></span>
+<span class="line"><span style="color:#E1E4E8">  method: </span><span style="color:#9ECBFF">'POST'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  headers: { </span><span style="color:#9ECBFF">'Content-Type'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'application/octet-stream'</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#E1E4E8">  body: audioFile </span><span style="color:#6A737D">// 音频二进制数据</span></span>
+<span class="line"><span style="color:#E1E4E8">});</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> srt</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> response.</span><span style="color:#B392F0">text</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(srt); </span><span style="color:#6A737D">// 输出 SRT 字幕</span></span></code></pre>
+<h4 id="上下文优化">上下文优化</h4>
+<p>利用 <code>initial_prompt</code> 或 <code>prefix</code> 参数输入上下文信息，提高转录准确率。例如：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -X</span><span style="color:#9ECBFF"> POST</span><span style="color:#9ECBFF"> "https://whispercloudflare.tchepai.com/raw?initial_prompt=技术会议"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">-H </span><span style="color:#9ECBFF">"Content-Type: application/octet-stream"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">--data-binary </span><span style="color:#9ECBFF">"@audio.mp3"</span></span></code></pre>
+<h4 id="语音活动检测vad">语音活动检测（VAD）</h4>
+<p>启用 VAD 过滤去除非语音内容，传入参数 <code>vad_filter=true</code>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -X</span><span style="color:#9ECBFF"> POST</span><span style="color:#9ECBFF"> "https://whispercloudflare.tchepai.com/raw?vad_filter=true"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">-H </span><span style="color:#9ECBFF">"Content-Type: application/octet-stream"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">--data-binary </span><span style="color:#9ECBFF">"@audio.mp3"</span></span></code></pre>
+<h4 id="翻译功能">翻译功能</h4>
+<p>通过设置 <code>task=translate</code> 和 <code>language</code> 参数，将音频内容翻译为指定语言。例如：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -X</span><span style="color:#9ECBFF"> POST</span><span style="color:#9ECBFF"> "https://whispercloudflare.tchepai.com/raw?task=translate&#x26;language=en"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">-H </span><span style="color:#9ECBFF">"Content-Type: application/octet-stream"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">--data-binary </span><span style="color:#9ECBFF">"@audio.mp3"</span></span></code></pre>
+<h3 id="性能与限制">性能与限制</h3>
+<ul>
+<li><strong>速度</strong>：测试中处理 41 分钟 39 秒音频仅需约 1.9 分钟。</li>
+<li><strong>限制</strong>：Cloudflare Workers 的资源限制可能导致偶尔失败，建议多尝试。</li>
+<li><strong>文件大小</strong>：单次上传文件大小上限为 25MB。</li>
+</ul>
+<h3 id="注意事项">注意事项</h3>
+<ul>
+<li><strong>API 安全</strong>：在 Cloudflare 管理平台正确配置 AI 绑定，避免泄露令牌。</li>
+<li><strong>错误处理</strong>：请求失败时，请稍作等待后重试。</li>
+<li><strong>浏览器兼容</strong>：Web 界面兼容主流现代浏览器，如 Chrome、Firefox 等。</li>
+</ul>
+<h2 id="应用场景">应用场景</h2>
+<ol>
+<li><strong>会议记录转录</strong>：上传会议音频，生成文本或 SRT 字幕，支持多语言会议整理。</li>
+<li><strong>播客字幕生成</strong>：为播客内容生成 SRT 字幕，提升内容可访问性与搜索优化。</li>
+<li><strong>教育资源转录</strong>：教师或学生上传课堂录音，生成笔记或字幕，方便复习。</li>
+<li><strong>语音应用开发</strong>：开发者利用 API 构建实时字幕或语音助手，适合轻量项目。</li>
+</ol>
+<h2 id="常见问答qa">常见问答（QA）</h2>
+<ol>
+<li>
+<p><strong>支持哪些音频格式？</strong></p>
+<p>支持 MP3、WAV 等格式，建议使用高质量音频。</p>
+</li>
+<li>
+<p><strong>如何处理大文件？</strong></p>
+<p>需手动切分为约 1MB 小文件，分块上传后合并。</p>
+</li>
+<li>
+<p><strong>部署是否收费？</strong></p>
+<p>Cloudflare Workers 免费计划即可部署，AI 模型每日提供 10,000 免费神经元，额外部分按每 1000 神经元收费 $0.011。</p>
+</li>
+<li>
+<p><strong>如何提升转录准确度？</strong></p>
+<p>通过 <code>initial_prompt</code>、<code>prefix</code> 和 <code>vad_filter</code> 参数来优化识别效果。</p>
+</li>
+<li>
+<p><strong>支持哪些语言？</strong></p>
+<p>包括英语、中文、日语等多种语言，详见 Whisper 官方文档。</p>
+</li>
+</ol>  </main> </div>  </div> </div> </div> <footer class="border-t border-gray-200 dark:border-gray-600 font-display" aria-labelledby="footer-heading"> <h2 id="footer-heading" class="sr-only">Footer</h2> <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32"> <div class="xl:grid xl:grid-cols-3 xl:gap-8"> <div class="space-y-8"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="flex space-x-6">  </div> </div> <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0 xl:justify-items-end"> <div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 目录 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/submit" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 提交 </a> </li><li> <a href="/zh/advertise" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 广告 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 分类 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/tags/chatbot" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI聊天 </a> </li><li> <a href="/zh/tags/writing" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI写作 </a> </li><li> <a href="/zh/tags/image" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI绘图 </a> </li><li> <a href="/zh/tags/video" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI视频 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 法律 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/legal/terms-of-service" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 隐私政策 </a> </li><li> <a href="/zh/legal/privacy-policy" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 服务条款 </a> </li> </ul> </div> </div> </div> <div class="mt-16 border-t border-gray-900/10 dark:border-gray-600 pt-8 sm:mt-20 lg:mt-24"> <p class="text-xs leading-5 text-gray-500">
+&copy; 2026 🚀 AI 工具导航 All rights reserved.
+</p> </div> </div> </footer> <div class="fixed bottom-6 right-6 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700"> <div class="flex items-center space-x-2"> <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language:</span> <div class="flex space-x-1"> <a href="https://aitool.alisencent.com/audio/whisper-on-cloudflare-ai/" class="px-3 py-1 text-sm rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"> EN </a><a href="https://aitool.alisencent.com/zh/audio/whisper-on-cloudflare-ai/" class="px-3 py-1 text-sm rounded-md bg-primary-500 text-white"> ZH </a> </div> </div> </div>  </body></html>
