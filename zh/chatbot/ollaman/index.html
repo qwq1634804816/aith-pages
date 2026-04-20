@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="UTF-8"><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.5.2"><title>OllaMan：可视化管理本地大模型的桌面客户端</title><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><!-- Facebook Meta Tags --><meta property="og:url" content="https://aitool.alisencent.com/zh"><meta property="og:type" content="website"><meta property="og:title" content="OllaMan：可视化管理本地大模型的桌面客户端"><meta property="og:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta property="og:image" content="https://aitool.alisencent.com/og/zh/chatbot/ollaman.png"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="codeagents.dev"><meta property="twitter:url" content="https://aitool.alisencent.com/zh"><meta name="twitter:title" content="AI工具导航"><meta name="twitter:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="twitter:image" content="https://aitool.alisencent.com/og/zh/chatbot/ollaman.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/assets/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><!-- 自动语言检测脚本 --><script src="/scripts/autoLangDetection.js" defer></script><link rel="stylesheet" href="/assets/_slug_.Cj3kDw6D.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style></head> <body class="bg-white dark:bg-gray-900"> <div>  <div class="md:flex">  <div class="w-full min-h-dvh"> <nav class="w-full z-20 start-0"> <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-4"> <div class="flex items-center gap-x-12"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"> <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700"> <li> <a href="https://aitool.alisencent.com" target="_blank" class="font-medium inline-flex py-2 px-3 text-gray-700 dark:text-gray-200 bg-primary-700 rounded md:bg-transparent md:p-0 md:dark:text-gray-300" aria-current="page"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" class="text-gray-500" data-icon="tabler:arrow-up-right">  <symbol id="ai:tabler:arrow-up-right"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></symbol><use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </li> </ul> </div> </div> <div class="flex gap-3 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> <a href="https://aitool.alisencent.com" class="hidden md:inline-flex items-center dark:text-gray-300 text-gray-600"> 提交AI工具 </a> <div data-astro-transition-persist="astro-4z5srsgt-2"> <button id="theme-toggle" class="flex justify-center items-center border border-gray-200 rounded-full w-8 h-8 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-gray-500 transition-all"> <span class="sr-only">Toggle Theme</span> <svg width="1em" height="1em" viewBox="0 0 24 24" class="hidden dark:block" data-icon="tabler:moon">  <symbol id="ai:tabler:moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></symbol><use  xlink:href="#ai:tabler:moon"></use>  </svg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="dark:hidden" data-icon="tabler:sun">  <symbol id="ai:tabler:sun"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use  xlink:href="#ai:tabler:sun"></use>  </svg> </button> </div> <script type="module">function o(t){const e=t||localStorage.getItem("color-theme"),n=window.matchMedia("(prefers-color-scheme: dark)").matches;e==="dark"||e===null&&n?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function c(){const t=document.getElementById("theme-toggle");t?(console.log("theme toggle found"),t.addEventListener("click",()=>{console.log("theme toggle clicked");const e=document.documentElement.classList.contains("dark")?"light":"dark";localStorage.setItem("color-theme",e),o(e)})):console.log("theme toggle not found")}o();document.addEventListener("astro:page-load",()=>{o(),c()});</script> <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false"> <span class="sr-only">Open main menu</span> <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path> </svg> </button> <div id="mobile-menu" class="sm:hidden hidden"> <div class="space-y-1 pb-4 pt-2"> <a href="https://aitool.alisencent.com" class="block border-l-4 py-2 pl-3 pr-4 text-base font-medium border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:external-link">  <symbol id="ai:tabler:external-link"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></symbol><use  xlink:href="#ai:tabler:external-link"></use>  </svg> </a> </div> </div> </div> </div></nav> <script type="module">const e=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),n=document.getElementById("mobile-menu-icon");e&&t&&n&&e.addEventListener("click",()=>{const m=t.classList.toggle("hidden");n.setAttribute("name",m?"tabler:baseline-density-medium":"tabler:x")});</script>  <div class="max-w-2xl w-full mx-auto py-20"> <div class="mb-10"> <div class="flex justify-between items-end"> <div> <img class="h-15 w-15 mb-8" src="https://repo.alisencent.com/upload/file/2026/04/02/d51c7d67d83524c.png" alt="OllaMan：可视化管理本地大模型的桌面客户端" width="60" height="60"> <h1 class="font-bold text-4xl text-gray-900 dark:text-gray-50"> OllaMan：可视化管理本地大模型的桌面客户端 </h1> </div> <a class="inline-flex items-center gap-1 font-medium text-gray-800 dark:text-gray-100" href="https://ollaman.com/"> ollaman.com/ <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:arrow-up-right">  <use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </div> <p class="text-gray-400 mt-2.5">OllaMan 是一款专为 Ollama 设计的跨平台桌面客户端，提供直观友好的图形界面，帮助用户轻松管理和使用本地大语言模型，实现模型搜索、一键下载、版本切换及实时对话，支持多系统和多服务器连接，极大提升了本地 AI 交互体验。</p> </div> <main class="max-w-none font-display prose prose-zinc dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 prose-a:hover:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b prose-a:hover:border-solid prose-a:hover:border-primary-400 prose-headings:text-gray-800 dark:prose-headings:text-gray-100 prose-a:border-gray-400 dark:prose-a:border-gray-400 dark:prose-a:hover:border-primary-400">  <p><img src="https://repo.alisencent.com/upload/file/2026/04/02/d51c7d67d83524c.png" alt="OllaMan：可视化管理本地大模型的桌面客户端"></p>
+<h1 id="ollaman可视化管理本地大模型的桌面客户端">OllaMan：可视化管理本地大模型的桌面客户端</h1>
+<p>OllaMan 是一款专为 <strong>Ollama</strong> 设计的跨平台桌面图形界面（GUI）客户端，旨在让命令行（CLI）操作 Ollama 变得更加直观和易用。它提供了现代化且优雅的界面，使得用户能够像浏览应用商店一样轻松管理本地大语言模型（如 Llama 3、<a href="https://www.kdjingpai.com/en/le-chat-mistral/">Mistral</a>、Gemma 等）。借助 OllaMan，用户无需记忆繁复的终端命令，即可实现模型搜索、一键下载、版本切换及实时对话。软件支持 macOS、Windows 和 Linux 平台，适合注重隐私的个人用户及需要管理多个 Ollama 服务节点的开发团队，是提升本地 AI 交互效率的理想工具。</p>
+<h2 id="功能列表">功能列表</h2>
+<ul>
+<li><strong>可视化模型库</strong>：提供类似“应用商店”的界面，允许用户搜索、预览并一键下载 Ollama 库中的多种大模型，免去手动输入 <code>pull</code> 命令的繁琐。</li>
+<li><strong>直观的聊天界面</strong>：内置类似 <a href="https://www.kdjingpai.com/en/chatgpt-6/">ChatGPT</a> 的对话窗口，支持 Markdown 渲染与代码高亮，能够顺畅与本地模型互动。</li>
+<li><strong>多模型管理</strong>：轻松查看安装的模型列表，支持模型删除、详情查看和快速切换当前对话所用模型。</li>
+<li><strong>多服务器连接</strong>：支持连接本地（localhost）及远程 Ollama 服务器，便于在不同算力设备间自由切换，例如在笔记本管理家用高性能台式机模型。</li>
+<li><strong>系统状态监控</strong>：部分版本可监控模型运行时的硬件资源使用，帮助用户掌握系统负载。</li>
+<li><strong>跨平台支持</strong>：原生支持 macOS、Windows 和 Linux，保证一致的用户体验。</li>
+</ul>
+<h2 id="使用帮助">使用帮助</h2>
+<p>OllaMan 的核心优势是将复杂的命令行操作转为简洁点击。以下是安装及使用的详细步骤，助你快速搭建本地 AI 助手。</p>
+<h3 id="1-前置准备">1. 前置准备</h3>
+<p>OllaMan 是 Ollama 的图形客户端壳，在使用之前，请确保电脑已安装并运行了 <strong>Ollama</strong> 核心服务。</p>
+<ul>
+<li><strong>验证方式</strong>：在浏览器访问 <code>http://127.0.0.1:11434/</code>，若页面显示“Ollama is running”，说明服务正常。若尚未安装，请访问 Ollama 官网进行下载安装。</li>
+</ul>
+<h3 id="2-下载与安装">2. 下载与安装</h3>
+<ul>
+<li><strong>下载</strong>：访问 <a href="https://ollaman.com/">OllaMan 官网</a>，页面自动识别系统平台并提供对应安装包（macOS 为 .dmg，Windows 为 .exe，Linux 支持 .deb 或 .AppImage）。点击“Download”按钮获取。</li>
+<li><strong>安装</strong>：
+<ul>
+<li>Windows：双击 .exe 文件，依照安装向导完成步骤。</li>
+<li>macOS：打开 .dmg 文件，将 OllaMan 拖入“应用程序”文件夹。</li>
+<li>Linux：赋予运行权限后直接运行 AppImage，或通过包管理器安装 deb 包。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-连接与配置">3. 连接与配置</h3>
+<ul>
+<li><strong>首次启动</strong>：打开 OllaMan，程序默认尝试连接本地 Ollama 地址 <code>http://127.0.0.1:11434</code>。</li>
+<li><strong>连接状态</strong>：查看左下角或右上角连接指示灯，绿色表示连接成功，红色表示连接异常，需确认 Ollama 服务是否启动。</li>
+<li><strong>远程连接（可选）</strong>：若需连接局域网内其他电脑的 Ollama，进入“设置（Settings）”，在“Host”或“Server URL”中输入目标 IP 地址（如 <code>http://192.168.1.50:11434</code>），确保目标设备环境变量 <code>OLLAMA_HOST</code> 设置为 <code>0.0.0.0</code> 以开放外部连接权限。</li>
+</ul>
+<h3 id="4-下载模型如同逛应用商店">4. 下载模型（如同逛应用商店）</h3>
+<ul>
+<li>访问左侧菜单的 <strong>“Models”</strong> 或 <strong>“Library”</strong> 页面。</li>
+<li>在搜索框输入模型名称，如 <code>llama3</code> 或 <code>qwen</code>。</li>
+<li>选择模型卡片并挑选版本参数（如 <code>8b</code>），点击 <strong>“Download”</strong> 或 <strong>“Pull”</strong> 按钮。</li>
+<li>下载进度条显示完成后，模型自动出现在“已安装模型”列表。</li>
+</ul>
+<h3 id="5-开始对话">5. 开始对话</h3>
+<ul>
+<li>点击左侧菜单的 <strong>“Chat”</strong> 图标。</li>
+<li>顶部下拉菜单选择所需模型。</li>
+<li>在输入框中输入问题并回车发送，AI 基于本地算力进行回答，全程无需联网，确保数据完全本地化。</li>
+</ul>
+<h2 id="应用场景">应用场景</h2>
+<ol>
+<li><strong>隐私敏感的文档处理</strong><br>
+在公司或个人电脑处理含敏感信息的文本（如财务报表、私人日记），配合本地模型确保数据交互完全本地完成，杜绝上传云端风险。</li>
+<li><strong>开发者多模型测试</strong><br>
+AI 开发者可快速切换不同模型（如对比 Llama3 与 Mistral），通过图形界面测试 Prompt 表现，无需反复用终端命令加载。</li>
+<li><strong>家庭算力中心管理</strong><br>
+用户可远程连接家中高性能台式机的模型，通过轻薄本操作，实现算力的远程调用和管理。</li>
+</ol>
+<h2 id="qa">QA</h2>
+<ol>
+<li><strong>OllaMan 是免费的吗？</strong><br>
+是的，OllaMan 通常以开源或免费软件形式发布，用户可免费管理本地模型。</li>
+<li><strong>安装 OllaMan 后还需安装 Ollama 吗？</strong><br>
+需要。OllaMan 仅是客户端界面，依赖 Ollama 服务提供模型运行支持，可视其为“遥控器”，而 Ollama 是“电视机”。</li>
+<li><strong>为何连接不上本地服务？</strong><br>
+请确保：</li>
+</ol>
+<ul>
+<li>Ollama 服务正在后台运行（任务栏有图标或终端已执行 <code>ollama serve</code>）；</li>
+<li>防火墙未屏蔽 11434 端口；</li>
+<li>OllaMan 默认连接地址为 <code>localhost:11434</code> 未被修改。</li>
+</ul>
+<ol start="4">
+<li><strong>OllaMan 可直接运行 Python 代码吗？</strong><br>
+其主要功能是对话和模型管理，虽能生成代码，但自身不具备执行 Python 代码的环境，应将代码复制到独立编辑器中运行。</li>
+</ol>  </main> </div>  </div> </div> </div> <footer class="border-t border-gray-200 dark:border-gray-600 font-display" aria-labelledby="footer-heading"> <h2 id="footer-heading" class="sr-only">Footer</h2> <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32"> <div class="xl:grid xl:grid-cols-3 xl:gap-8"> <div class="space-y-8"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="flex space-x-6">  </div> </div> <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0 xl:justify-items-end"> <div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 目录 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/submit" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 提交 </a> </li><li> <a href="/zh/advertise" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 广告 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 分类 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/tags/chatbot" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI聊天 </a> </li><li> <a href="/zh/tags/writing" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI写作 </a> </li><li> <a href="/zh/tags/image" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI绘图 </a> </li><li> <a href="/zh/tags/video" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI视频 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 法律 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/legal/terms-of-service" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 隐私政策 </a> </li><li> <a href="/zh/legal/privacy-policy" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 服务条款 </a> </li> </ul> </div> </div> </div> <div class="mt-16 border-t border-gray-900/10 dark:border-gray-600 pt-8 sm:mt-20 lg:mt-24"> <p class="text-xs leading-5 text-gray-500">
+&copy; 2026 🚀 AI 工具导航 All rights reserved.
+</p> </div> </div> </footer> <div class="fixed bottom-6 right-6 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700"> <div class="flex items-center space-x-2"> <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language:</span> <div class="flex space-x-1"> <a href="https://aitool.alisencent.com/chatbot/ollaman/" class="px-3 py-1 text-sm rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"> EN </a><a href="https://aitool.alisencent.com/zh/chatbot/ollaman/" class="px-3 py-1 text-sm rounded-md bg-primary-500 text-white"> ZH </a> </div> </div> </div>  </body></html>

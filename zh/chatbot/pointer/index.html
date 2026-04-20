@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="UTF-8"><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.5.2"><title>Pointer：支持多模型对话与数据分析的AI聊天工具</title><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><!-- Facebook Meta Tags --><meta property="og:url" content="https://aitool.alisencent.com/zh"><meta property="og:type" content="website"><meta property="og:title" content="Pointer：支持多模型对话与数据分析的AI聊天工具"><meta property="og:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta property="og:image" content="https://aitool.alisencent.com/og/zh/chatbot/pointer.png"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="codeagents.dev"><meta property="twitter:url" content="https://aitool.alisencent.com/zh"><meta name="twitter:title" content="AI工具导航"><meta name="twitter:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="twitter:image" content="https://aitool.alisencent.com/og/zh/chatbot/pointer.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/assets/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><!-- 自动语言检测脚本 --><script src="/scripts/autoLangDetection.js" defer></script><link rel="stylesheet" href="/assets/_slug_.Cj3kDw6D.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style></head> <body class="bg-white dark:bg-gray-900"> <div>  <div class="md:flex">  <div class="w-full min-h-dvh"> <nav class="w-full z-20 start-0"> <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-4"> <div class="flex items-center gap-x-12"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"> <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700"> <li> <a href="https://aitool.alisencent.com" target="_blank" class="font-medium inline-flex py-2 px-3 text-gray-700 dark:text-gray-200 bg-primary-700 rounded md:bg-transparent md:p-0 md:dark:text-gray-300" aria-current="page"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" class="text-gray-500" data-icon="tabler:arrow-up-right">  <symbol id="ai:tabler:arrow-up-right"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></symbol><use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </li> </ul> </div> </div> <div class="flex gap-3 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> <a href="https://aitool.alisencent.com" class="hidden md:inline-flex items-center dark:text-gray-300 text-gray-600"> 提交AI工具 </a> <div data-astro-transition-persist="astro-4z5srsgt-2"> <button id="theme-toggle" class="flex justify-center items-center border border-gray-200 rounded-full w-8 h-8 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-gray-500 transition-all"> <span class="sr-only">Toggle Theme</span> <svg width="1em" height="1em" viewBox="0 0 24 24" class="hidden dark:block" data-icon="tabler:moon">  <symbol id="ai:tabler:moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></symbol><use  xlink:href="#ai:tabler:moon"></use>  </svg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="dark:hidden" data-icon="tabler:sun">  <symbol id="ai:tabler:sun"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use  xlink:href="#ai:tabler:sun"></use>  </svg> </button> </div> <script type="module">function o(t){const e=t||localStorage.getItem("color-theme"),n=window.matchMedia("(prefers-color-scheme: dark)").matches;e==="dark"||e===null&&n?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function c(){const t=document.getElementById("theme-toggle");t?(console.log("theme toggle found"),t.addEventListener("click",()=>{console.log("theme toggle clicked");const e=document.documentElement.classList.contains("dark")?"light":"dark";localStorage.setItem("color-theme",e),o(e)})):console.log("theme toggle not found")}o();document.addEventListener("astro:page-load",()=>{o(),c()});</script> <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false"> <span class="sr-only">Open main menu</span> <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path> </svg> </button> <div id="mobile-menu" class="sm:hidden hidden"> <div class="space-y-1 pb-4 pt-2"> <a href="https://aitool.alisencent.com" class="block border-l-4 py-2 pl-3 pr-4 text-base font-medium border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:external-link">  <symbol id="ai:tabler:external-link"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></symbol><use  xlink:href="#ai:tabler:external-link"></use>  </svg> </a> </div> </div> </div> </div></nav> <script type="module">const e=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),n=document.getElementById("mobile-menu-icon");e&&t&&n&&e.addEventListener("click",()=>{const m=t.classList.toggle("hidden");n.setAttribute("name",m?"tabler:baseline-density-medium":"tabler:x")});</script>  <div class="max-w-2xl w-full mx-auto py-20"> <div class="mb-10"> <div class="flex justify-between items-end"> <div> <img class="h-15 w-15 mb-8" src="https://repo.alisencent.com/upload/file/2026/04/02/3f266995955ab87.png" alt="Pointer：支持多模型对话与数据分析的AI聊天工具" width="60" height="60"> <h1 class="font-bold text-4xl text-gray-900 dark:text-gray-50"> Pointer：支持多模型对话与数据分析的AI聊天工具 </h1> </div> <a class="inline-flex items-center gap-1 font-medium text-gray-800 dark:text-gray-100" href="https://github.com/experdot/pointer"> github.com/experdot/pointer <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:arrow-up-right">  <use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </div> <p class="text-gray-400 mt-2.5">Pointer 是一款基于 Electron、React 和 TypeScript 开发的开源 AI 聊天应用，支持多模型对话与智能交叉数据分析，适用于教育、研究、商业分析及内容创作，用户可在 Windows、macOS 和 Linux 上流畅使用。</p> </div> <main class="max-w-none font-display prose prose-zinc dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 prose-a:hover:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b prose-a:hover:border-solid prose-a:hover:border-primary-400 prose-headings:text-gray-800 dark:prose-headings:text-gray-100 prose-a:border-gray-400 dark:prose-a:border-gray-400 dark:prose-a:hover:border-primary-400">  <p>Pointer 是一个开源的 AI 聊天应用，采用 Electron、React 和 TypeScript 开发，由 experdot 维护并托管于 GitHub。该项目支持多种模型对话（包括 OpenAI GPT、Claude、DeepSeek 等），并具备智能的交叉数据分析和知识管理功能。Pointer 致力于帮助用户高效处理复杂信息，广泛适用于教育、研究、商业分析和内容创作等领域。项目拥有活跃的社区，拥有 35 个星标和 5 个分叉，代码库定期维护更新。用户可以通过简便的安装流程在 Windows、macOS 或 Linux 系统上运行，获得流畅的使用体验。</p>
+<p><img src="https://repo.alisencent.com/upload/file/2026/04/02/170eb51a7fe0aa2.png" alt="Pointer 界面"></p>
+<h2 id="功能列表">功能列表</h2>
+<ul>
+<li>支持多种 AI 模型，用户可在 OpenAI GPT、Claude、DeepSeek等模型之间自由切换。</li>
+<li>提供流式对话响应，实时展示 AI 的推理过程。</li>
+<li>支持消息树形分支管理，便于追踪和切换不同对话版本。</li>
+<li>具备全局内容搜索，支持关键词高亮显示。</li>
+<li>内置 AI 交叉分析表功能，自动生成结构化的对比表格。</li>
+<li>包含 AI 对象管理器，方便可视化管理和编辑复杂的数据结构。</li>
+<li>支持数据导入导出，并兼容 OpenAI ChatGPT 和 DeepSeek Chat 的数据格式。</li>
+<li>采用文件夹式知识管理，支持消息书签、标签及批量操作功能。</li>
+</ul>
+<h2 id="使用帮助">使用帮助</h2>
+<h3 id="安装流程">安装流程</h3>
+<p>要使用 Pointer，需完成以下环境配置和应用运行步骤：</p>
+<ol>
+<li><strong>准备开发环境</strong>
+<ul>
+<li>安装 Node.js 18 或更高版本，详见 <a href="https://nodejs.org/">Node.js 官网</a>。</li>
+<li>通过命令安装 pnpm 包管理器：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -g</span><span style="color:#9ECBFF"> pnpm</span></span></code></pre>
+<ul>
+<li>系统支持 Windows 10 以上、macOS 10.15 以上及 Linux。</li>
+<li>安装 Git 用于克隆代码库。</li>
+</ul>
+<ol start="2">
+<li><strong>克隆代码库</strong></li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/experdot/pointer.git</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> pointer</span></span></code></pre>
+<ol start="3">
+<li><strong>安装依赖</strong></li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pnpm</span><span style="color:#9ECBFF"> install</span></span></code></pre>
+<p>等待依赖安装完成。</p>
+<ol start="4">
+<li><strong>启动开发模式</strong></li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pnpm</span><span style="color:#9ECBFF"> dev</span></span></code></pre>
+<p>启动后，Electron 应用界面将打开。</p>
+<ol start="5">
+<li><strong>构建应用</strong>
+根据系统选择相应命令生成可执行文件：</li>
+</ol>
+<ul>
+<li>Windows:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pnpm</span><span style="color:#9ECBFF"> build:win</span></span></code></pre>
+<ul>
+<li>macOS:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pnpm</span><span style="color:#9ECBFF"> build:mac</span></span></code></pre>
+<ul>
+<li>Linux:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pnpm</span><span style="color:#9ECBFF"> build:linux</span></span></code></pre>
+<p>构建结果存于项目目录的 <code>dist</code> 文件夹下。</p>
+<ol start="6">
+<li>
+<p><strong>配置 AI 模型</strong></p>
+<ul>
+<li>启动应用后访问“设置”界面。</li>
+<li>配置模型参数，如名称、API 端点、访问密钥及模型标识符（如 <code>gpt-3.5-turbo</code> 或 <code>claude-3</code>）。</li>
+<li>设定默认模型并测试连接。</li>
+</ul>
+</li>
+</ol>
+<h3 id="功能操作流程">功能操作流程</h3>
+<p>Pointer 提供多项实用功能，使用方法如下：</p>
+<ol>
+<li>
+<p><strong>多模型对话</strong></p>
+<ul>
+<li>在主界面选择所需 AI 模型。</li>
+<li>输入问题或指令，AI 通过流式响应提供答案并实时展示推理过程。</li>
+<li>例如，输入“生成一个奇幻小说设定”，AI 将逐步创作内容并允许保存到消息树。</li>
+<li>利用消息树管理，切换对话分支，查看历史版本，支持新建分支。</li>
+</ul>
+</li>
+<li>
+<p><strong>交叉分析表</strong></p>
+<ul>
+<li>打开“交叉分析表”模块，输入主题（如“比较不同编程语言”）。</li>
+<li>AI 自动生成包含相关对比维度的结构化表格。</li>
+<li>用户可编辑表格数据。</li>
+<li>示例：输入“比较 Python 和 Java”，自动生成包含“语法复杂性”“性能”“应用场景”等维度的比较表。</li>
+<li>保存后可导出为 Markdown 或 JSON 格式。</li>
+</ul>
+</li>
+<li>
+<p><strong>对象管理器</strong></p>
+<ul>
+<li>在模块中查看和编辑复杂数据结构，以树状图形式展示数据层级。</li>
+<li>支持节点拖放与内容编辑。</li>
+<li>示例：整理文献列表时，AI 生成包含作者、年份、主题等的树状结构。</li>
+<li>支持导出数据为 JSON 或 CSV。</li>
+</ul>
+</li>
+<li>
+<p><strong>知识管理</strong></p>
+<ul>
+<li>通过“文件夹”视图组织对话和数据。</li>
+<li>添加书签和标签，方便快速查找。</li>
+<li>支持批量删除和移动操作。</li>
+<li>示例：为“机器学习”相关对话添加标签，配合全局搜索快速定位。</li>
+<li>数据备份与恢复功能支持本地文件保存与上传。</li>
+</ul>
+</li>
+<li>
+<p><strong>全局内容搜索</strong></p>
+<ul>
+<li>通过搜索栏输入关键字，AI 会高亮并定位所有相关内容。</li>
+<li>例如，搜索“Python”，快速查找含该关键字的对话和数据节点。</li>
+</ul>
+</li>
+<li>
+<p><strong>数据导入导出</strong></p>
+<ul>
+<li>在“设置 > 数据导入”上传符合 OpenAI ChatGPT 或 DeepSeek Chat 格式的 JSON 文件，自动解析。</li>
+<li>可导出兼容主流 AI 平台的 JSON 数据。</li>
+</ul>
+</li>
+</ol>
+<h3 id="注意事项">注意事项</h3>
+<ul>
+<li><strong>API 配置</strong>：请确保填写正确且可用的 API 密钥，以保证模型连接正常。</li>
+<li><strong>性能优化</strong>：处理大量数据时，可关闭实时推理以提升速度。</li>
+<li><strong>数据安全</strong>：建议定期备份数据，防止丢失。</li>
+<li><strong>调试技巧</strong>：开发模式下，可开启 Electron 开发者工具查看日志，帮助问题排查。</li>
+</ul>
+<p>通过上述指南，用户可迅速掌握 Pointer 的安装及核心功能，实现高效 AI 对话与数据分析应用。</p>
+<h2 id="应用场景">应用场景</h2>
+<ol>
+<li>
+<p><strong>学术研究</strong></p>
+<ul>
+<li>利用交叉分析表比较文献，整理研究主题。</li>
+<li>使用对象管理器可视化数据结构，借助知识管理功能整理笔记与参考资料。</li>
+</ul>
+</li>
+<li>
+<p><strong>商业分析</strong></p>
+<ul>
+<li>企业应用交叉分析表进行市场竞争分析，比较产品特性和战略方案。</li>
+<li>全局搜索帮助快速检索历史分析记录。</li>
+</ul>
+</li>
+<li>
+<p><strong>内容创作</strong></p>
+<ul>
+<li>创作者利用多模型对话生成创意内容（如小说设定、文章大纲）。</li>
+<li>通过文件夹和标签功能管理素材，提高创作效率。</li>
+</ul>
+</li>
+<li>
+<p><strong>个人学习</strong></p>
+<ul>
+<li>学生使用 Pointer 整理课程笔记，生成知识点比较表。</li>
+<li>利用对象管理器构建知识体系，便于复习总结。</li>
+</ul>
+</li>
+</ol>
+<h2 id="qa">QA</h2>
+<ol>
+<li><strong>Pointer 支持哪些 AI 模型？</strong></li>
+</ol>
+<p>Pointer 兼容多种主流模型，包括 OpenAI GPT、Claude 与 DeepSeek，用户可在设置中配置相应 API。</p>
+<ol start="2">
+<li><strong>是否需要付费？</strong></li>
+</ol>
+<p>Pointer 本身为 MIT 许可的免费开源软件，但调用 AI 平台模型可能产生相应的 API 费用。</p>
+<ol start="3">
+<li><strong>如何迁移聊天数据？</strong></li>
+</ol>
+<p>通过“设置 > 数据导入”上传 OpenAI ChatGPT 或 DeepSeek Chat 的 JSON 格式数据，Pointer 将自动解析导入。</p>
+<ol start="4">
+<li><strong>交叉分析表适用于哪些场景？</strong></li>
+</ol>
+<p>适合学术文献比较、商业产品对比及教育知识整理等多种需求。</p>
+<ol start="5">
+<li><strong>如何参与 Pointer 开发？</strong></li>
+</ol>
+<p>欢迎 Fork 项目，创建功能分支，遵循 TypeScript 和 ESLint 规范，提交 Pull Request。具体贡献指南详见 GitHub 仓库。</p>  </main> </div>  </div> </div> </div> <footer class="border-t border-gray-200 dark:border-gray-600 font-display" aria-labelledby="footer-heading"> <h2 id="footer-heading" class="sr-only">Footer</h2> <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32"> <div class="xl:grid xl:grid-cols-3 xl:gap-8"> <div class="space-y-8"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="flex space-x-6">  </div> </div> <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0 xl:justify-items-end"> <div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 目录 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/submit" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 提交 </a> </li><li> <a href="/zh/advertise" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 广告 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 分类 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/tags/chatbot" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI聊天 </a> </li><li> <a href="/zh/tags/writing" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI写作 </a> </li><li> <a href="/zh/tags/image" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI绘图 </a> </li><li> <a href="/zh/tags/video" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI视频 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 法律 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/legal/terms-of-service" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 隐私政策 </a> </li><li> <a href="/zh/legal/privacy-policy" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 服务条款 </a> </li> </ul> </div> </div> </div> <div class="mt-16 border-t border-gray-900/10 dark:border-gray-600 pt-8 sm:mt-20 lg:mt-24"> <p class="text-xs leading-5 text-gray-500">
+&copy; 2026 🚀 AI 工具导航 All rights reserved.
+</p> </div> </div> </footer> <div class="fixed bottom-6 right-6 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700"> <div class="flex items-center space-x-2"> <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language:</span> <div class="flex space-x-1"> <a href="https://aitool.alisencent.com/chatbot/pointer/" class="px-3 py-1 text-sm rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"> EN </a><a href="https://aitool.alisencent.com/zh/chatbot/pointer/" class="px-3 py-1 text-sm rounded-md bg-primary-500 text-white"> ZH </a> </div> </div> </div>  </body></html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="UTF-8"><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.5.2"><title>Clawd Code：复刻Claude Code泄露版本的Python开源移植代码</title><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><!-- Facebook Meta Tags --><meta property="og:url" content="https://aitool.alisencent.com/zh"><meta property="og:type" content="website"><meta property="og:title" content="Clawd Code：复刻Claude Code泄露版本的Python开源移植代码"><meta property="og:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta property="og:image" content="https://aitool.alisencent.com/og/zh/coding/clawd-code.png"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="codeagents.dev"><meta property="twitter:url" content="https://aitool.alisencent.com/zh"><meta name="twitter:title" content="AI工具导航"><meta name="twitter:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="twitter:image" content="https://aitool.alisencent.com/og/zh/coding/clawd-code.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/assets/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><!-- 自动语言检测脚本 --><script src="/scripts/autoLangDetection.js" defer></script><link rel="stylesheet" href="/assets/_slug_.Cj3kDw6D.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style></head> <body class="bg-white dark:bg-gray-900"> <div>  <div class="md:flex">  <div class="w-full min-h-dvh"> <nav class="w-full z-20 start-0"> <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-4"> <div class="flex items-center gap-x-12"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"> <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700"> <li> <a href="https://aitool.alisencent.com" target="_blank" class="font-medium inline-flex py-2 px-3 text-gray-700 dark:text-gray-200 bg-primary-700 rounded md:bg-transparent md:p-0 md:dark:text-gray-300" aria-current="page"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" class="text-gray-500" data-icon="tabler:arrow-up-right">  <symbol id="ai:tabler:arrow-up-right"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></symbol><use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </li> </ul> </div> </div> <div class="flex gap-3 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> <a href="https://aitool.alisencent.com" class="hidden md:inline-flex items-center dark:text-gray-300 text-gray-600"> 提交AI工具 </a> <div data-astro-transition-persist="astro-4z5srsgt-2"> <button id="theme-toggle" class="flex justify-center items-center border border-gray-200 rounded-full w-8 h-8 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-gray-500 transition-all"> <span class="sr-only">Toggle Theme</span> <svg width="1em" height="1em" viewBox="0 0 24 24" class="hidden dark:block" data-icon="tabler:moon">  <symbol id="ai:tabler:moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></symbol><use  xlink:href="#ai:tabler:moon"></use>  </svg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="dark:hidden" data-icon="tabler:sun">  <symbol id="ai:tabler:sun"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use  xlink:href="#ai:tabler:sun"></use>  </svg> </button> </div> <script type="module">function o(t){const e=t||localStorage.getItem("color-theme"),n=window.matchMedia("(prefers-color-scheme: dark)").matches;e==="dark"||e===null&&n?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function c(){const t=document.getElementById("theme-toggle");t?(console.log("theme toggle found"),t.addEventListener("click",()=>{console.log("theme toggle clicked");const e=document.documentElement.classList.contains("dark")?"light":"dark";localStorage.setItem("color-theme",e),o(e)})):console.log("theme toggle not found")}o();document.addEventListener("astro:page-load",()=>{o(),c()});</script> <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false"> <span class="sr-only">Open main menu</span> <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path> </svg> </button> <div id="mobile-menu" class="sm:hidden hidden"> <div class="space-y-1 pb-4 pt-2"> <a href="https://aitool.alisencent.com" class="block border-l-4 py-2 pl-3 pr-4 text-base font-medium border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:external-link">  <symbol id="ai:tabler:external-link"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></symbol><use  xlink:href="#ai:tabler:external-link"></use>  </svg> </a> </div> </div> </div> </div></nav> <script type="module">const e=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),n=document.getElementById("mobile-menu-icon");e&&t&&n&&e.addEventListener("click",()=>{const m=t.classList.toggle("hidden");n.setAttribute("name",m?"tabler:baseline-density-medium":"tabler:x")});</script>  <div class="max-w-2xl w-full mx-auto py-20"> <div class="mb-10"> <div class="flex justify-between items-end"> <div> <img class="h-15 w-15 mb-8" src="https://repo.alisencent.com/upload/file/2026/04/08/3f266995955ab87.png" alt="Clawd Code：复刻Claude Code泄露版本的Python开源移植代码" width="60" height="60"> <h1 class="font-bold text-4xl text-gray-900 dark:text-gray-50"> Clawd Code：复刻Claude Code泄露版本的Python开源移植代码 </h1> </div> <a class="inline-flex items-center gap-1 font-medium text-gray-800 dark:text-gray-100" href="https://github.com/instructkr/clawd-code"> github.com/instructkr/clawd-code <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:arrow-up-right">  <use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </div> <p class="text-gray-400 mt-2.5">Clawd Code 是一个独立且开源的 Python 项目，旨在将泄露的 Claude Code 核心交互与工具调度机制进行复现。</p> </div> <main class="max-w-none font-display prose prose-zinc dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 prose-a:hover:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b prose-a:hover:border-solid prose-a:hover:border-primary-400 prose-headings:text-gray-800 dark:prose-headings:text-gray-100 prose-a:border-gray-400 dark:prose-a:border-gray-400 dark:prose-a:hover:border-primary-400">  <p>Clawd Code 是一个旨在将泄露的 AI 编程助手 Claude Code 进行 Python 开源移植的独立项目。最初由开发者基于 oh-my-codex (OmX) 框架研发，聚焦于“Harness Engineering”（智能体调度工程），探索 AI 系统如何高效调度外部工具、编排复杂任务及管理超长运行上下文。该工具不仅是代码库的备份或概念验证，而是真正能“完成实际工作”的自动化编程助手。通过本地运行，它可以自主读取文件系统、执行代码、运行测试，并提供多种高级协作模式，让开发者深入理解下一代自动化 AI 开发智能体的工作原理与底层设计。</p>
+<h2 id="功能列表">功能列表</h2>
+<ul>
+<li><strong>复刻 Claude Code 的终端原生体验</strong>：在终端环境中与大语言模型对话，AI 能根据自然语言指令自主浏览目录、读取代码文件、编写和修改代码，并触发本地测试。</li>
+<li><strong>并行代码审查（$team 模式）</strong>：独特的多线程模式，支持同时启动多个 AI 实例深度审查代码库，确保多方位的代码质量验证和安全审查。</li>
+<li><strong>架构级持久化执行（$ralph 模式）</strong>：支持持续的执行循环，AI 能从“架构师”的角度逻辑推理、代码生成与多轮验证，确保任务完全符合要求。</li>
+<li><strong>OmX 底层工作流引擎支持</strong>：利用 oh-my-codex 布局流程编排，提供灵活的底层调度逻辑，保证大语言模型在复杂任务中不易丢失上下文。</li>
+<li><strong>灵活的外部工具链集成</strong>：通过配置环境变量或 Token，让智能体直接呼叫 GitHub、Linear 等第三方工具，实现自动化工作流。</li>
+<li><strong>自定义工作区与智能体身份管理</strong>：使用 Markdown 文本文件管理智能体的指令和记忆上下文，用户可随时编辑本地文本以改变 AI 的个性、编码规范与工作流习惯。</li>
+</ul>
+<h2 id="使用帮助">使用帮助</h2>
+<p>欢迎使用 Clawd Code。这款工具是基于 Claude Code 泄露版本构建的终端 AI 编程助手，能够自动化处理编码、审查和测试任务。为确保充分发挥工具潜力并实现最佳效率，请详读安装与操作指南。</p>
+<h3 id="一-安装与前置环境准备">一、 安装与前置环境准备</h3>
+<p><strong>1. 系统与环境要求</strong></p>
+<ul>
+<li><strong>操作系统</strong>：支持 macOS、Linux 和 Windows（推荐使用 WSL2 以获得最佳终端兼容性）。</li>
+<li><strong>Python 版本</strong>：需安装 Python 3.10 或更高版本。</li>
+<li><strong>包管理工具</strong>：建议使用 <code>pip</code>，为避免依赖冲突，最好配合 <code>virtualenv</code> 或 <code>conda</code> 创建隔离的 Python 虚拟环境。</li>
+</ul>
+<p><strong>2. 获取源码与依赖安装</strong><br>
+打开命令行终端，执行以下命令将 Clawd Code 项目克隆到本地并安装必要的依赖项：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># 克隆开源仓库到本地</span></span>
+<span class="line"><span>git clone https://github.com/instructkr/clawd-code.git</span></span>
+<span class="line"><span>cd clawd-code</span></span>
+<span class="line"><span># 创建并激活 Python 虚拟环境（推荐操作）</span></span>
+<span class="line"><span>python3 -m venv venv</span></span>
+<span class="line"><span>source venv/bin/activate  # Windows 用户请使用 venv\Scripts\activate</span></span>
+<span class="line"><span># 安装项目的核心依赖包</span></span>
+<span class="line"><span>pip install -r requirements.txt</span></span></code></pre>
+<p><strong>3. 环境变量与 API 密钥配置</strong><br>
+Clawd Code 基于大语言模型的智能体系统，需配置模型 API 密钥以赋予其思考和编码能力。项目根目录下提供了基础的环境变量模板文件 <code>env.example</code>。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>cp .env.example .env</span></span></code></pre>
+<p>使用文本编辑器（如 vim、nano 或 VS Code）打开新创建的 <code>env</code> 文件，填入您的 API Key：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># 必填：配置 [Anthropic](https://www.kdjingpai.com/en/claudeanquanfubai/) 的 API 密钥（推荐使用 Claude 3.5 Sonnet）</span></span>
+<span class="line"><span>ANTHROPIC_API_KEY="sk-ant-api03-xxxxxxxxxxxxxxxxxxxx"</span></span>
+<span class="line"><span># 选填：如需智能体执行 GitHub 自动化提交流程，建议配置 Personal Access [Token](https://www.kdjingpai.com/en/tokenization/)</span></span>
+<span class="line"><span>GITHUB_ACCESS_TOKEN="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxx"</span></span></code></pre>
+<h3 id="二-核心功能与基础操作流程">二、 核心功能与基础操作流程</h3>
+<p><strong>1. 启动并进入智能体交互模式</strong><br>
+确保环境变量配置无误且虚拟环境已激活后，通过以下命令启动智能体主程序：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>python main.py</span></span></code></pre>
+<p>启动后，终端进入交互式命令提示符界面。此时 Clawd Code 接管了当前目录的上下文。您可以直接用自然语言发布开发任务。<br>
+<em>基础操作示例</em>：<br>
+👤 <strong>User</strong>: “请分析当前目录下的 <code>src/utils.py</code> 文件，找出可能导致内存泄漏的函数，并给出重构建议。”<br>
+🤖 <strong>Agent</strong>: (Clawd Code 开始调度本地文件读取工具 -> 分析代码内容 -> 输出分析报告 -> 询问您是否需要其直接修改该文件)</p>
+<p><strong>2. 使用 $team 模式：并行代码审查</strong><br>
+在大型 Pull Request 或涉及多个模块的重构时，单线思考的 AI 可能会产生遗漏，此时，可以调用 Clawd Code 的 <code>$team</code> 模式。<br>
+<em>操作方式</em>：在终端交互模式下，输入带 <code>$team</code> 前缀的指令：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>$team 审查当前 Git 分支中所有的修改，重点检查 SQL 注入漏洞和多线程安全问题。</span></span></code></pre>
+<p><em>工作原理</em>：OmX 调度引擎会派出多个独立评估的 AI 实例（如网络安全、运行性能、代码规范），并行读取代码，随后汇总审查意见，显著提高 Code Review 的严谨度与效率。</p>
+<p><strong>3. 使用 $ralph 模式：架构级持久验证执行</strong><br>
+常见的代码生成工具通常仅“一次性写出代码”，未必保证“这些代码能在整体架构中顺利运作”。<code>$ralph</code> 模式是专为此设计的高级功能，赋予 AI 持久循环执行和多步试错验证的权限。<br>
+<em>操作方式</em>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>$ralph 将项目底层的 SQLite 操作迁移至 PostgreSQL，请自行修改代码、编写单元测试并运行验证，直到测试通过。</span></span></code></pre>
+<p><em>工作原理</em>：启动后，Clawd Code 会进入“思考 -> 计划 -> 编码 -> 运行测试 -> 捕捉报错 -> 自我修正 -> 再次测试”的全自动闭环。您可观察到进程与状态日志，并随时按 <code>Ctrl+C</code> 手动介入或终止，非常适合处理系统级的重构任务。</p>
+<h3 id="三-进阶配置定制工作区与外部工具集成">三、 进阶配置：定制工作区与外部工具集成</h3>
+<p><strong>1. 管理智能体记忆与工作区 (.workspace)</strong><br>
+初次运行 Clawd Code 时，项目目录下会自动生成类似于 <code>.clawd-workspace/</code> 的隐藏配置文件夹，存放若干 Markdown 格式的配置文件：</p>
+<ul>
+<li><code>identity.md</code>：定义智能体角色和性格。例如，您可以将其改为“你是一个对于代码要求极高的 Linux 内核开发者”。</li>
+<li><code>rules.md</code>：设定项目的编码规范，如“本项目所有 Python 函数必须使用 Type Hints，不可用全局变量，必须写 Docstring”。您可通过文本编辑器修改这些本地 Markdown 文件，自定义符合团队习惯的专属 AI 助手。</li>
+</ul>
+<p><strong>2. 外部工具调度配置 (Tools &#x26; Integrations)</strong><br>
+Clawd Code 的强大在于其“工具链”的扩展能力。通过配置特定的 Token，智能体能直接操作第三方工具：</p>
+<ul>
+<li><strong>对接 GitHub 流水线</strong>：配置文件中的 <code>GITHUB_ACCESS_TOKEN</code>，可直接让终端执行提交和创建 PR。Clawd Code 会自动调动 Git 命令与 GitHub API 完成操作。</li>
+<li><strong>调用本地 CLI 工具</strong>：若您的系统安装了格式化或静态分析工具（如 <code>black</code>、<code>mypy</code> 或 <code>ruff</code>），可直接命令 AI：“在代码修改完毕后，请格式化所有修改文件”。AI 会如真实程序员般执行相应命令并清理代码。</li>
+</ul>
+<h3 id="四-注意事项与最佳实践">四、 注意事项与最佳实践</h3>
+<ol>
+<li><strong>安全与权限隔离</strong>：Clawd Code 具备读取、写入甚至删除本地文件的权限，建议在使用未知来源的自动化任务或涉及核心生产数据时，使用 Docker 或专用沙盒虚拟机以避免误删或覆盖重要文件。</li>
+<li><strong>Token 开销与成本监控</strong>：频繁使用 <code>$team</code> 和 <code>$ralph</code> 模式将造成大量 API 请求，建议在进行复杂任务前先让 AI 输出简单执行计划，确认逻辑无误后再执行。</li>
+<li><strong>学术研究与二次开发</strong>：本项目旨在让开发者透明地了解大模型的工具调度原理，建议仔细阅读底层源码以学习 Clawd Code 如何解析模型输出，并将其转化为本地 Python 函数执行。</li>
+</ol>
+<h2 id="应用场景">应用场景</h2>
+<ol>
+<li><strong>本地自动化编程与代码重构</strong>：在处理遗留代码库时，开发者可利用 Clawd Code 自动分析复杂的函数依赖关系，并在本地环境直接应用重构补丁，简化操作流程。</li>
+<li><strong>多维度的代码库并行审查</strong>：在代码合入主干时，使用 <code>$team</code> 模式对代码库进行快速自动化排查，Clawd Code 从网络安全性、执行性能与代码规范等多视角给出审查意见，提升审查效率。</li>
+<li><strong>智能体架构研究与二次开发</strong>：为 AI Agent 开发者提供了一份干净架构的参考源码，帮助学习如何用 Python 构建任务持久化队列，截获并处理模型输出。</li>
+<li><strong>复杂问题的闭环修复 (Bug Fixing)</strong>：使用 <code>$ralph</code> 模式，让 Clawd Code 自主分析报错日志、修正业务逻辑并反复运行本地测试，直至无异常。</li>
+</ol>
+<h2 id="qa">QA</h2>
+<ol>
+<li><strong>该项目与原版 Claude Code 的关系</strong>？<br>
+Clawd Code 是基于泄露版 Claude Code 的独立开源 Python 重新实现版本，精准复现其核心的工具调度与终端代理机制。</li>
+<li><strong>为什么要进行 Python 开源移植？</strong><br>
+本工具主要用于教育目的。原版 Claude Code 代码闭源且结构复杂，而此开源版本去除商业部分，为开发者提供了透明学习的材料。</li>
+<li><strong>运行 Clawd Code 需支持什么模型？</strong><br>
+基于 OmX 的调度框架需强逻辑推理及原生工具调用能力的大型语言模型，建议配置 Claude 3.5 Sonnet / Opus 或 OpenAI 的 GPT-4o。</li>
+<li><strong>项目能用于商业开发吗？</strong><br>
+该项目虽开源，但开发者明确标明其主要用于学习。私人集成至商业工作流时，需自行承担潜在的成本和安全责任，建议在沙盒或容器中运行以需保证文件安全。</li>
+</ol>  </main> </div>  </div> </div> </div> <footer class="border-t border-gray-200 dark:border-gray-600 font-display" aria-labelledby="footer-heading"> <h2 id="footer-heading" class="sr-only">Footer</h2> <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32"> <div class="xl:grid xl:grid-cols-3 xl:gap-8"> <div class="space-y-8"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="flex space-x-6">  </div> </div> <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0 xl:justify-items-end"> <div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 目录 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/submit" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 提交 </a> </li><li> <a href="/zh/advertise" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 广告 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 分类 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/tags/chatbot" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI聊天 </a> </li><li> <a href="/zh/tags/writing" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI写作 </a> </li><li> <a href="/zh/tags/image" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI绘图 </a> </li><li> <a href="/zh/tags/video" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI视频 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 法律 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/legal/terms-of-service" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 隐私政策 </a> </li><li> <a href="/zh/legal/privacy-policy" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 服务条款 </a> </li> </ul> </div> </div> </div> <div class="mt-16 border-t border-gray-900/10 dark:border-gray-600 pt-8 sm:mt-20 lg:mt-24"> <p class="text-xs leading-5 text-gray-500">
+&copy; 2026 🚀 AI 工具导航 All rights reserved.
+</p> </div> </div> </footer> <div class="fixed bottom-6 right-6 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700"> <div class="flex items-center space-x-2"> <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language:</span> <div class="flex space-x-1"> <a href="https://aitool.alisencent.com/coding/clawd-code/" class="px-3 py-1 text-sm rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"> EN </a><a href="https://aitool.alisencent.com/zh/coding/clawd-code/" class="px-3 py-1 text-sm rounded-md bg-primary-500 text-white"> ZH </a> </div> </div> </div>  </body></html>

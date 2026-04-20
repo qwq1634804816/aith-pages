@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="UTF-8"><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.5.2"><title>Kitten-TTS-Server：一个可自行部署的轻量级文本转语音服务</title><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><!-- Facebook Meta Tags --><meta property="og:url" content="https://aitool.alisencent.com/zh"><meta property="og:type" content="website"><meta property="og:title" content="Kitten-TTS-Server：一个可自行部署的轻量级文本转语音服务"><meta property="og:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta property="og:image" content="https://aitool.alisencent.com/og/zh/audio/kitten-tts-server.png"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="codeagents.dev"><meta property="twitter:url" content="https://aitool.alisencent.com/zh"><meta name="twitter:title" content="AI工具导航"><meta name="twitter:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="twitter:image" content="https://aitool.alisencent.com/og/zh/audio/kitten-tts-server.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/assets/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><!-- 自动语言检测脚本 --><script src="/scripts/autoLangDetection.js" defer></script><link rel="stylesheet" href="/assets/_slug_.Cj3kDw6D.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style></head> <body class="bg-white dark:bg-gray-900"> <div>  <div class="md:flex">  <div class="w-full min-h-dvh"> <nav class="w-full z-20 start-0"> <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-4"> <div class="flex items-center gap-x-12"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"> <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700"> <li> <a href="https://aitool.alisencent.com" target="_blank" class="font-medium inline-flex py-2 px-3 text-gray-700 dark:text-gray-200 bg-primary-700 rounded md:bg-transparent md:p-0 md:dark:text-gray-300" aria-current="page"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" class="text-gray-500" data-icon="tabler:arrow-up-right">  <symbol id="ai:tabler:arrow-up-right"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></symbol><use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </li> </ul> </div> </div> <div class="flex gap-3 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> <a href="https://aitool.alisencent.com" class="hidden md:inline-flex items-center dark:text-gray-300 text-gray-600"> 提交AI工具 </a> <div data-astro-transition-persist="astro-4z5srsgt-2"> <button id="theme-toggle" class="flex justify-center items-center border border-gray-200 rounded-full w-8 h-8 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-gray-500 transition-all"> <span class="sr-only">Toggle Theme</span> <svg width="1em" height="1em" viewBox="0 0 24 24" class="hidden dark:block" data-icon="tabler:moon">  <symbol id="ai:tabler:moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></symbol><use  xlink:href="#ai:tabler:moon"></use>  </svg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="dark:hidden" data-icon="tabler:sun">  <symbol id="ai:tabler:sun"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use  xlink:href="#ai:tabler:sun"></use>  </svg> </button> </div> <script type="module">function o(t){const e=t||localStorage.getItem("color-theme"),n=window.matchMedia("(prefers-color-scheme: dark)").matches;e==="dark"||e===null&&n?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function c(){const t=document.getElementById("theme-toggle");t?(console.log("theme toggle found"),t.addEventListener("click",()=>{console.log("theme toggle clicked");const e=document.documentElement.classList.contains("dark")?"light":"dark";localStorage.setItem("color-theme",e),o(e)})):console.log("theme toggle not found")}o();document.addEventListener("astro:page-load",()=>{o(),c()});</script> <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false"> <span class="sr-only">Open main menu</span> <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path> </svg> </button> <div id="mobile-menu" class="sm:hidden hidden"> <div class="space-y-1 pb-4 pt-2"> <a href="https://aitool.alisencent.com" class="block border-l-4 py-2 pl-3 pr-4 text-base font-medium border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:external-link">  <symbol id="ai:tabler:external-link"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></symbol><use  xlink:href="#ai:tabler:external-link"></use>  </svg> </a> </div> </div> </div> </div></nav> <script type="module">const e=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),n=document.getElementById("mobile-menu-icon");e&&t&&n&&e.addEventListener("click",()=>{const m=t.classList.toggle("hidden");n.setAttribute("name",m?"tabler:baseline-density-medium":"tabler:x")});</script>  <div class="max-w-2xl w-full mx-auto py-20"> <div class="mb-10"> <div class="flex justify-between items-end"> <div> <img class="h-15 w-15 mb-8" src="https://repo.alisencent.com/upload/file/2026/04/05/3f266995955ab87.png" alt="Kitten-TTS-Server：一个可自行部署的轻量级文本转语音服务" width="60" height="60"> <h1 class="font-bold text-4xl text-gray-900 dark:text-gray-50"> Kitten-TTS-Server：一个可自行部署的轻量级文本转语音服务 </h1> </div> <a class="inline-flex items-center gap-1 font-medium text-gray-800 dark:text-gray-100" href="https://github.com/devnen/Kitten-TTS-Server"> github.com/devnen/Kitten-TTS-Server <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:arrow-up-right">  <use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </div> <p class="text-gray-400 mt-2.5">Kitten-TTS-Server 是一个基于 KittenTTS 模型的开源项目，提供了功能完善且易于部署的文本转语音服务器。它集成了网页界面、多样语音和 GPU 加速，支持长文本有声读物生成，简化了模型使用流程。</p> </div> <main class="max-w-none font-display prose prose-zinc dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 prose-a:hover:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b prose-a:hover:border-solid prose-a:hover:border-primary-400 prose-headings:text-gray-800 dark:prose-headings:text-gray-100 prose-a:border-gray-400 dark:prose-a:border-gray-400 dark:prose-a:hover:border-primary-400">  <p>Kitten-TTS-Server 是一款开源项目，为轻量级的 <a href="https://www.kdjingpai.com/kittentts/">KittenTTS</a> 模型打造了一个功能丰富的服务器环境。用户可以借助此项目自行搭建文本转语音（TTS）服务。核心优势在于其基于小巧的模型（不足25MB）构建，拥有用户友好的网页界面、长文本有声书生成支持及显著的 GPU 加速性能。服务器极大简化了模型安装与运行过程，使非专业用户也能轻松上手。内置8种预设语音（4男4女），并支持通过 Docker 容器快速部署，降低维护难度。</p>
+<p><img src="https://repo.alisencent.com/upload/file/2026/04/05/3fa1ccc1d40a10c.png" alt="Kitten-TTS-Server示意图"></p>
+<h2 id="功能列表">功能列表</h2>
+<ul>
+<li><strong>轻量级模型</strong>：基于 KittenTTS ONNX 模型，体积小于25MB，资源占用低。</li>
+<li><strong>GPU 加速</strong>：采用优化的 <code>onnxruntime-gpu</code> 管道与 I/O 绑定技术，支持 NVIDIA CUDA 显卡，大幅提升语音合成速度。</li>
+<li><strong>长文本与有声书生成</strong>：支持智能断句与分块处理，能无缝拼接音频，适合制作完整有声读物。</li>
+<li><strong>现代化网页界面</strong>：提供直观的 Web UI，支持文本输入、语音选择、语速调节以及实时波形显示。</li>
+<li><strong>多种内置语音</strong>：集成模型自带8种声音（4男4女），可直接选择使用。</li>
+<li><strong>双 API 接口</strong>：分别提供全功能 <code>/tts</code> 接口和兼容 OpenAI TTS API 的 <code>/v1/audio/speech</code> 接口，便于集成。</li>
+<li><strong>配置简便</strong>：所有参数集中于单一 <code>config.yaml</code> 文件中管理。</li>
+<li><strong>状态记忆</strong>：网页端会记忆上次文本、语音及设置，方便连续使用。</li>
+<li><strong>Docker 支持</strong>：提供适用于 CPU 和 GPU 的 Docker Compose 文件，实现一键托管部署。</li>
+</ul>
+<h2 id="使用帮助">使用帮助</h2>
+<p>Kitten-TTS-Server 提供完整的安装及使用指南，确保用户能顺利部署于本地设备。</p>
+<h3 id="系统环境准备">系统环境准备</h3>
+<p>安装前请准备如下环境：</p>
+<ol>
+<li><strong>操作系统</strong>：Windows 10/11 (64位) 或 Linux（推荐 Debian/Ubuntu）。</li>
+<li><strong>Python</strong>：版本需为 3.10 及以上。</li>
+<li><strong>Git</strong>：用于克隆代码。</li>
+<li><strong>eSpeak NG</strong>：文本音素化所需依赖。
+<ul>
+<li>Windows：下载并安装 <code>espeak-ng-X.XX-x64.msi</code>，安装后重启终端。</li>
+<li>Linux：执行 <code>sudo apt install espeak-ng</code> 安装。</li>
+</ul>
+</li>
+<li><strong>（GPU 加速可选）</strong>：
+<ul>
+<li>一块支持 CUDA 的 NVIDIA 显卡。</li>
+<li>（Linux）需安装 <code>libsndfile1</code> 和 <code>ffmpeg</code>，用命令 <code>sudo apt install libsndfile1 ffmpeg</code> 安装。</li>
+</ul>
+</li>
+</ol>
+<h3 id="安装步骤">安装步骤</h3>
+<p>整个安装流程设计为“一键执行”，根据硬件环境选择相应路径。</p>
+<p><strong>第一步：克隆代码仓库</strong></p>
+<p>打开终端（Windows 使用 PowerShell，Linux 使用 Bash），执行：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/devnen/Kitten-TTS-Server.git</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> Kitten-TTS-Server</span></span></code></pre>
+<p><strong>第二步：创建并激活 Python 虚拟环境</strong></p>
+<p>避免依赖冲突，建议使用独立虚拟环境。</p>
+<ul>
+<li>Windows (PowerShell)：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m venv venv</span></span>
+<span class="line"><span style="color:#E1E4E8">.\venv\Scripts\activate</span></span></code></pre>
+<ul>
+<li>Linux (Bash)：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python3</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> venv</span><span style="color:#9ECBFF"> venv</span></span>
+<span class="line"><span style="color:#79B8FF">source</span><span style="color:#9ECBFF"> venv/bin/activate</span></span></code></pre>
+<p>激活成功后，命令行提示符前会出现 <code>(venv)</code>。</p>
+<p><strong>第三步：安装 Python 依赖</strong></p>
+<p>根据是否拥有 NVIDIA 显卡，选择如下方案：</p>
+<ul>
+<li><strong>仅 CPU 安装（简便）</strong></li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --upgrade</span><span style="color:#9ECBFF"> pip</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -r</span><span style="color:#9ECBFF"> requirements.txt</span></span></code></pre>
+<ul>
+<li><strong>NVIDIA GPU 加速安装（性能更佳）</strong></li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --upgrade</span><span style="color:#9ECBFF"> pip</span></span>
+<span class="line"><span style="color:#6A737D"># 安装GPU支持的ONNX Runtime</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> onnxruntime-gpu</span></span>
+<span class="line"><span style="color:#6A737D"># 安装支持CUDA的PyTorch及依赖</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> torch</span><span style="color:#9ECBFF"> torchaudio</span><span style="color:#79B8FF"> --index-url</span><span style="color:#9ECBFF"> https://download.pytorch.org/whl/cu121</span></span>
+<span class="line"><span style="color:#6A737D"># 安装其余依赖</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -r</span><span style="color:#9ECBFF"> requirements-nvidia.txt</span></span></code></pre>
+<p>安装后，运行以下脚本检测 CUDA 是否可用：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> "import torch; print(f'CUDA available: {torch.cuda.is_available()}')"</span></span></code></pre>
+<p>若输出 <code>CUDA available: True</code>，表示 GPU 支持已配置成功。</p>
+<h3 id="运行服务器">运行服务器</h3>
+<blockquote>
+<p><strong>注意</strong>：首次启动服务器时会自动下载约25MB的 KittenTTS 模型，仅需一次，后续启动速度较快。</p>
+</blockquote>
+<ol>
+<li>确认激活虚拟环境 (提示符带有 <code>(venv)</code>)。</li>
+<li>在终端执行：</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python</span><span style="color:#9ECBFF"> server.py</span></span></code></pre>
+<ol start="3">
+<li>启动后，默认浏览器会自动打开操作页面。</li>
+</ol>
+<ul>
+<li>网页地址：<code>http://localhost:8005</code></li>
+<li>API 文档：<code>http://localhost:8005/docs</code></li>
+</ul>
+<p>停止服务器只需按 <code>CTRL+C</code>。</p>
+<h3 id="docker-安装可选">Docker 安装（可选）</h3>
+<p>熟悉 Docker 的用户可选用 Docker Compose 部署，简便高效。</p>
+<ol>
+<li>
+<p>准备环境：</p>
+<ul>
+<li>安装 Docker 和 Docker Compose。</li>
+<li>（GPU 用户）安装 NVIDIA Container Toolkit。</li>
+</ul>
+</li>
+<li>
+<p>克隆项目（若未完成）</p>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/devnen/Kitten-TTS-Server.git</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> Kitten-TTS-Server</span></span></code></pre>
+<ol start="3">
+<li>启动容器（根据硬件环境）</li>
+</ol>
+<ul>
+<li>NVIDIA GPU 用户：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#9ECBFF"> up</span><span style="color:#79B8FF"> -d</span><span style="color:#79B8FF"> --build</span></span></code></pre>
+<ul>
+<li>仅 CPU 用户：</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#79B8FF"> -f</span><span style="color:#9ECBFF"> docker-compose-cpu.yml</span><span style="color:#9ECBFF"> up</span><span style="color:#79B8FF"> -d</span><span style="color:#79B8FF"> --build</span></span></code></pre>
+<ol start="4">
+<li>访问和管理容器：</li>
+</ol>
+<ul>
+<li>网页访问：<code>http://localhost:8005</code></li>
+<li>查看日志：<code>docker compose logs -f</code></li>
+<li>停止容器：<code>docker compose down</code></li>
+</ul>
+<h3 id="功能操作">功能操作</h3>
+<ul>
+<li>
+<p><strong>生成普通语音</strong></p>
+<ol>
+<li>启动服务器并打开 <code>http://localhost:8005</code>。</li>
+<li>输入目标文本。</li>
+<li>选择喜欢的语音。</li>
+<li>调节语速滑块。</li>
+<li>点击“Generate Speech”，音频将自动播放并提供下载。</li>
+</ol>
+</li>
+<li>
+<p><strong>生成有声书</strong></p>
+<ol>
+<li>复制整本书/章节的纯文本。</li>
+<li>粘贴至网页文本框。</li>
+<li>确保“Split text into chunks”选项启用。</li>
+<li>设置合适的分块大小（推荐300-500字符）。</li>
+<li>点击“Generate Speech”，长文本将被切片合成音频，供下载完整文件。</li>
+</ol>
+</li>
+</ul>
+<h2 id="应用场景">应用场景</h2>
+<ol>
+<li>
+<p><strong>制作有声书</strong></p>
+<p>将电子书、长文章或小说转换为有声读物，长文本处理功能自动完成切分与拼接。</p>
+</li>
+<li>
+<p><strong>个人语音助手</strong></p>
+<p>开发者可调用 API，为应用增添语音播报功能，如新闻、天气和通知等。</p>
+</li>
+<li>
+<p><strong>视频内容配音</strong></p>
+<p>自媒体使用，生成视频旁白或解说，提升效率且成本低廉，支持灵活修改。</p>
+</li>
+<li>
+<p><strong>学习辅助工具</strong></p>
+<p>语言学习者输入单词或句子，得到标准发音。也可将学习资料转成音频，在通勤或运动时收听。</p>
+</li>
+</ol>
+<h2 id="常见问答qa">常见问答（QA）</h2>
+<ol>
+<li>
+<p><strong>本项目与直接使用 KittenTTS 模型有何不同？</strong></p>
+<p>本项目是 KittenTTS 的服务化封装，解决了环境配置复杂、界面缺失、长文本处理及 GPU 加速等问题。提供开箱即用的网站界面与 API，方便非专业用户使用。</p>
+</li>
+<li>
+<p><strong>安装时遇到 eSpeak 相关错误怎么办？</strong></p>
+<p>请确认已正确安装对应系统的 eSpeak NG，并重启命令行终端。若问题依旧，检查是否安装在系统标准路径。</p>
+</li>
+<li>
+<p><strong>如何确认 GPU 加速生效？</strong></p>
+<p>确认已按 NVIDIA 方式安装依赖，执行命令检测是否支持 CUDA，服务器运行时也可用任务管理器或 <code>nvidia-smi</code> 查询显卡利用情况。</p>
+</li>
+<li>
+<p><strong>服务器提示“端口被占用”怎么办？</strong></p>
+<p>说明本机已有程序占用了端口8005，可在 <code>config.yaml</code> 中修改 <code>server.port</code> 为其他未被占用端口（例如8006），再重启服务器。</p>
+</li>
+</ol>  </main> </div>  </div> </div> </div> <footer class="border-t border-gray-200 dark:border-gray-600 font-display" aria-labelledby="footer-heading"> <h2 id="footer-heading" class="sr-only">Footer</h2> <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32"> <div class="xl:grid xl:grid-cols-3 xl:gap-8"> <div class="space-y-8"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="flex space-x-6">  </div> </div> <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0 xl:justify-items-end"> <div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 目录 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/submit" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 提交 </a> </li><li> <a href="/zh/advertise" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 广告 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 分类 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/tags/chatbot" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI聊天 </a> </li><li> <a href="/zh/tags/writing" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI写作 </a> </li><li> <a href="/zh/tags/image" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI绘图 </a> </li><li> <a href="/zh/tags/video" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI视频 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 法律 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/legal/terms-of-service" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 隐私政策 </a> </li><li> <a href="/zh/legal/privacy-policy" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 服务条款 </a> </li> </ul> </div> </div> </div> <div class="mt-16 border-t border-gray-900/10 dark:border-gray-600 pt-8 sm:mt-20 lg:mt-24"> <p class="text-xs leading-5 text-gray-500">
+&copy; 2026 🚀 AI 工具导航 All rights reserved.
+</p> </div> </div> </footer> <div class="fixed bottom-6 right-6 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700"> <div class="flex items-center space-x-2"> <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language:</span> <div class="flex space-x-1"> <a href="https://aitool.alisencent.com/audio/kitten-tts-server/" class="px-3 py-1 text-sm rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"> EN </a><a href="https://aitool.alisencent.com/zh/audio/kitten-tts-server/" class="px-3 py-1 text-sm rounded-md bg-primary-500 text-white"> ZH </a> </div> </div> </div>  </body></html>

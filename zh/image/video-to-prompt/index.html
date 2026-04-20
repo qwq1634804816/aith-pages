@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="UTF-8"><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.5.2"><title>Video to Prompt：从视频中提取文本描述</title><meta name="description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><!-- Facebook Meta Tags --><meta property="og:url" content="https://aitool.alisencent.com/zh"><meta property="og:type" content="website"><meta property="og:title" content="Video to Prompt：从视频中提取文本描述"><meta property="og:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta property="og:image" content="https://aitool.alisencent.com/og/zh/image/video-to-prompt.png"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="codeagents.dev"><meta property="twitter:url" content="https://aitool.alisencent.com/zh"><meta name="twitter:title" content="AI工具导航"><meta name="twitter:description" content="收录最全AI工具，涵盖写作、绘图、编程、视频、办公等多个领域，每日更新。"><meta name="twitter:image" content="https://aitool.alisencent.com/og/zh/image/video-to-prompt.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/assets/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><!-- 自动语言检测脚本 --><script src="/scripts/autoLangDetection.js" defer></script><link rel="stylesheet" href="/assets/_slug_.Cj3kDw6D.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style></head> <body class="bg-white dark:bg-gray-900"> <div>  <div class="md:flex">  <div class="w-full min-h-dvh"> <nav class="w-full z-20 start-0"> <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-4"> <div class="flex items-center gap-x-12"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"> <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700"> <li> <a href="https://aitool.alisencent.com" target="_blank" class="font-medium inline-flex py-2 px-3 text-gray-700 dark:text-gray-200 bg-primary-700 rounded md:bg-transparent md:p-0 md:dark:text-gray-300" aria-current="page"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" class="text-gray-500" data-icon="tabler:arrow-up-right">  <symbol id="ai:tabler:arrow-up-right"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></symbol><use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </li> </ul> </div> </div> <div class="flex gap-3 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> <a href="https://aitool.alisencent.com" class="hidden md:inline-flex items-center dark:text-gray-300 text-gray-600"> 提交AI工具 </a> <div data-astro-transition-persist="astro-4z5srsgt-2"> <button id="theme-toggle" class="flex justify-center items-center border border-gray-200 rounded-full w-8 h-8 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 dark:border-gray-500 transition-all"> <span class="sr-only">Toggle Theme</span> <svg width="1em" height="1em" viewBox="0 0 24 24" class="hidden dark:block" data-icon="tabler:moon">  <symbol id="ai:tabler:moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></symbol><use  xlink:href="#ai:tabler:moon"></use>  </svg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="dark:hidden" data-icon="tabler:sun">  <symbol id="ai:tabler:sun"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use  xlink:href="#ai:tabler:sun"></use>  </svg> </button> </div> <script type="module">function o(t){const e=t||localStorage.getItem("color-theme"),n=window.matchMedia("(prefers-color-scheme: dark)").matches;e==="dark"||e===null&&n?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function c(){const t=document.getElementById("theme-toggle");t?(console.log("theme toggle found"),t.addEventListener("click",()=>{console.log("theme toggle clicked");const e=document.documentElement.classList.contains("dark")?"light":"dark";localStorage.setItem("color-theme",e),o(e)})):console.log("theme toggle not found")}o();document.addEventListener("astro:page-load",()=>{o(),c()});</script> <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false"> <span class="sr-only">Open main menu</span> <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path> </svg> </button> <div id="mobile-menu" class="sm:hidden hidden"> <div class="space-y-1 pb-4 pt-2"> <a href="https://aitool.alisencent.com" class="block border-l-4 py-2 pl-3 pr-4 text-base font-medium border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"> 关注我们 <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:external-link">  <symbol id="ai:tabler:external-link"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></symbol><use  xlink:href="#ai:tabler:external-link"></use>  </svg> </a> </div> </div> </div> </div></nav> <script type="module">const e=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),n=document.getElementById("mobile-menu-icon");e&&t&&n&&e.addEventListener("click",()=>{const m=t.classList.toggle("hidden");n.setAttribute("name",m?"tabler:baseline-density-medium":"tabler:x")});</script>  <div class="max-w-2xl w-full mx-auto py-20"> <div class="mb-10"> <div class="flex justify-between items-end"> <div> <img class="h-15 w-15 mb-8" src="https://repo.alisencent.com/upload/file/2026/04/07/a7e8295e10bb0de.png" alt="Video to Prompt：从视频中提取文本描述" width="60" height="60"> <h1 class="font-bold text-4xl text-gray-900 dark:text-gray-50"> Video to Prompt：从视频中提取文本描述 </h1> </div> <a class="inline-flex items-center gap-1 font-medium text-gray-800 dark:text-gray-100" href="https://videotoprompt.online/"> videotoprompt.online/ <svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="tabler:arrow-up-right">  <use  xlink:href="#ai:tabler:arrow-up-right"></use>  </svg> </a> </div> <p class="text-gray-400 mt-2.5">Video to Prompt是一款免费的在线AI工具，帮助用户从视频中自动生成文本描述。</p> </div> <main class="max-w-none font-display prose prose-zinc dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 prose-a:hover:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b prose-a:hover:border-solid prose-a:hover:border-primary-400 prose-headings:text-gray-800 dark:prose-headings:text-gray-100 prose-a:border-gray-400 dark:prose-a:border-gray-400 dark:prose-a:hover:border-primary-400">  <p>Video to Prompt是一款免费的在线AI工具，它可以自动分析用户上传的视频文件。通过AI技术，该工具深入理解视频中的视觉元素、叙事流程和音频内容，生成详细的文本描述，即“提示词”。使用者无需具备任何专业技术，只需上传视频，工具便能快速提供可用于多种用途的文本描述，例如社交媒体帖子标题、视频摘要或创作灵感。此工具支持多种语言，能够有效帮助全球的内容创作者、营销人员和教育工作者节省时间，更高效地运用视频内容。</p>
+<h2 id="功能列表">功能列表</h2>
+<ul>
+<li><strong>AI视频分析</strong>: 自动处理视频，提取关键元素并生成准确的文本描述。</li>
+<li><strong>操作简单</strong>: 用户界面直观，只需三步（上传、提交、等待结果）即可完成，无需任何技术背景。</li>
+<li><strong>支持多语言</strong>: 生成多种语言的视频描述，便于内容在全球传播。</li>
+<li><strong>快速且安全</strong>: 视频处理迅速，网站使用加密措施保护用户上传文件的安全与隐私。</li>
+<li><strong>激发创意</strong>: 生成的文本描述为内容创作者提供灵感，帮助构思新的视频脚本或创意点子。</li>
+<li><strong>完全免费</strong>: 工具提供免费的服务，用户可无限制使用其功能生成视频提示词。</li>
+</ul>
+<h2 id="使用帮助">使用帮助</h2>
+<p>Video to Prompt的设计初衷是使不具备任何专业视频剪辑或AI知识背景的用户能够轻松使用。下面将详细介绍如何操作这个网站，以及如何将生成的结果应用到实际工作中。</p>
+<h3 id="核心操作流程">核心操作流程</h3>
+<p>网站的核心功能集中在主页的交互窗口上，整个过程被简化为三个步骤。</p>
+<h3 id="第一步上传你的视频文件">第一步：上传你的视频文件</h3>
+<ol>
+<li>打开Video to Prompt网站首页，你会看到一个名为<code>Qwen2.5-VL-32B-Instruct Demo</code>的交互区域。</li>
+<li>在左侧有一个“📁 Upload (上传文件)”按钮。点击它会打开你的文件选择窗口。</li>
+<li>在窗口中找到想要分析的视频文件，然后点击“打开”或“确定”。网站支持多种视频格式，无需担心兼容性问题。</li>
+<li>上传成功后，你会在输入框区域看到你的视频文件信息。</li>
+</ol>
+<h3 id="第二步提交并开始分析">第二步：提交并开始分析</h3>
+<ol>
+<li>上传后，交互区域会显示一个输入框， 填有指令如<code>Describe the video</code>。（描述这个视频）。通常无需修改这个指令。</li>
+<li>确认无误后，点击输入框右侧的“🚀 Submit (发送)”按钮。</li>
+<li>AI模型开始处理你的视频，可能需要几十秒到几分钟，具体时间取决于视频长度、复杂程度及当前服务器状况。请耐心等待。</li>
+</ol>
+<h3 id="第三步获取并使用结果">第三步：获取并使用结果</h3>
+<ol>
+<li>分析完成后，结果会在交互区域的下方显示。这是一段由AI生成的详细视频描述。</li>
+<li>你可以直接复制这段文本。若对结果不满意，可点击“🤔️ Regenerate (重试)”按钮，AI会重新分析并生成新的描述。</li>
+<li>若想分析新视频，可以点击“🧹 Clear History (清除历史)”来清空当前内容，重复第一步操作。</li>
+</ol>
+<h3 id="如何有效利用生成的文本">如何有效利用生成的文本</h3>
+<p>获取视频文本描述后，可以在以下几个方面提升工作效率：</p>
+<ul>
+<li><strong>社交媒体内容创作</strong>: 可直接用生成描述为视频文案。例如，精准的描述有助于社交媒体算法推荐给精准观众。可从描述中找关键词作为视频标签。</li>
+<li><strong>内容存档与检索</strong>: 为每个视频生成文本描述并存档，便于未来内容检索。只需搜索相关关键词即可快速找到特定场景素材。</li>
+<li><strong>二次创作的灵感来源</strong>: AI生成的描述可能捕捉到未曾注意的细节，阅读描述可能带来新的创作视角和灵感。</li>
+<li><strong>辅助制作字幕</strong>: 虽无法直接生成字幕文件，但生成的场景描述可作为制作带有场景描述的字幕的参考。</li>
+</ul>
+<p>此工具的价值在于将非结构化的视频信息转化为结构化的文本信息，架起视频内容与后续文本处理工作之间的桥梁。</p>
+<h2 id="应用场景">应用场景</h2>
+<ol>
+<li><strong>社交媒体内容管理</strong><br>
+运营团队或个人博主管理多个平台，需要为每个视频撰写吸引人描述和标签，使用Video to Prompt可快速生成基础文案，减少时间成本。</li>
+<li><strong>视频制作与电影创作</strong><br>
+电影制作人或视频剪辑师在项目后期需撰写影片简介或大纲，可上传片段利用此工具生成场景描述，助力撰写营销文案。</li>
+<li><strong>教育与研究</strong><br>
+教育工作者和研究人员可借助该工具将项目分析视频转化为文本，便于内容分析与引用。</li>
+<li><strong>数字资产管理</strong><br>
+拥有大量视频素材库的企业可使用此工具自动生成元数据，提升素材查找与复用效率。</li>
+</ol>
+<h2 id="qa">QA</h2>
+<ol>
+<li><strong>这个工具是免费的吗？</strong><br>
+是的，Video to Prompt是免费的AI提示词生成工具，用户可无限制使用。</li>
+<li><strong>使用这个工具需要专业技术知识吗？</strong><br>
+完全不需要，界面设计简洁，任何人均可通过简单操作使用。</li>
+<li><strong>我的视频文件上传后是否安全？</strong><br>
+网站使用强大加密技术保护用户文件的安全与隐私。</li>
+<li><strong>这个工具支持哪些视频格式？</strong><br>
+支持多种主流视频格式如MP4、MOV、AVI等。</li>
+<li><strong>生成提示词的速度快吗？</strong><br>
+通常处理速度很快，多数情况下几分钟内提供描述。</li>
+<li><strong>如果我对生成的结果不满意怎么办？</strong><br>
+可点击“Regenerate（重试）”按钮，AI会重新分析并生成新描述。</li>
+<li><strong>生成的描述支持哪些语言？</strong><br>
+该工具支持多种语言生成视频描述，适合跨国内容创作与推广。</li>
+</ol>  </main> </div>  </div> </div> </div> <footer class="border-t border-gray-200 dark:border-gray-600 font-display" aria-labelledby="footer-heading"> <h2 id="footer-heading" class="sr-only">Footer</h2> <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32"> <div class="xl:grid xl:grid-cols-3 xl:gap-8"> <div class="space-y-8"> <a href="/zh" class="flex items-center space-x-3 rtl:space-x-reverse">  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">🚀 AI 工具导航</span> </a> <div class="flex space-x-6">  </div> </div> <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0 xl:justify-items-end"> <div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 目录 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/submit" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 提交 </a> </li><li> <a href="/zh/advertise" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 广告 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 分类 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/tags/chatbot" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI聊天 </a> </li><li> <a href="/zh/tags/writing" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI写作 </a> </li><li> <a href="/zh/tags/image" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI绘图 </a> </li><li> <a href="/zh/tags/video" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> AI视频 </a> </li> </ul> </div><div> <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"> 法律 </h3> <ul role="list" class="mt-6 space-y-4"> <li> <a href="/zh/legal/terms-of-service" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 隐私政策 </a> </li><li> <a href="/zh/legal/privacy-policy" class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:dark:text-gray-400 hover:text-gray-900"> 服务条款 </a> </li> </ul> </div> </div> </div> <div class="mt-16 border-t border-gray-900/10 dark:border-gray-600 pt-8 sm:mt-20 lg:mt-24"> <p class="text-xs leading-5 text-gray-500">
+&copy; 2026 🚀 AI 工具导航 All rights reserved.
+</p> </div> </div> </footer> <div class="fixed bottom-6 right-6 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700"> <div class="flex items-center space-x-2"> <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language:</span> <div class="flex space-x-1"> <a href="https://aitool.alisencent.com/image/video-to-prompt/" class="px-3 py-1 text-sm rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"> EN </a><a href="https://aitool.alisencent.com/zh/image/video-to-prompt/" class="px-3 py-1 text-sm rounded-md bg-primary-500 text-white"> ZH </a> </div> </div> </div>  </body></html>
